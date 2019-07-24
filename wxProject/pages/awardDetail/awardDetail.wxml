@@ -1,0 +1,32 @@
+<!--pages/awardDetail/awardDetail.wxml-->
+<view class='award-detail-head'>
+  <image mode='widthFix' src='../../image/award1.jpg'></image>
+  <view class='award-some-msg font_16'>
+    <view class='award-title font_bold font_666'>创意七彩小书灯</view>
+    <view class='award-integral'>
+      <text class='font_main font'>3000</text>
+      <text class='font_999 font_13'>积分</text>
+      <text class='font_999 font_13'>原价：￥9999</text>
+    </view>
+    <view class='award-time font_de font_666'>
+      <view>
+        <image src='../../image/shop_ri.png'></image>有效期
+      </view>
+      <view>至2919-01-01</view>
+    </view>
+  </view>
+</view>
+
+<view class='award-detail'>
+  <view class='font_de'>商品详情</view>
+  <image mode='widthFix' src='../../image/awardDetail.jpg'></image>
+</view>
+
+<view class='exchange-rule font_de'>
+  <view>兑换规则</view>
+  <view>兑换规则</view>
+</view>
+
+<view class='exchange font_16'>
+  <view>马上兑换</view>
+</view>

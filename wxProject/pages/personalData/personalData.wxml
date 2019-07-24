@@ -1,0 +1,35 @@
+<!--pages/personalData/personalData.wxml-->
+
+<image class='center_bg' mode='widthFix' src="../../image/center_bg.png"></image>
+<view class="personal_data_head">
+  <view class="personal_data_head_img">
+    <image src="../../image/gg_g.png" />
+  </view>
+</view>
+
+<view class='formBox'>
+  <form bindsubmit='submitPersonalData'> 
+    <label>
+      <image src='../../image/center_nickname.png'></image>
+      <input type='text' placeholder='请输入昵称' name="nickname"></input>
+    </label>
+    <label>
+      <image src='../../image/center_name.png'></image>
+      <input type='text' placeholder='请输入姓名' name="userName"></input>
+    </label>
+    <label>
+      <image src='../../image/center_tel.png'></image>
+      <input type='number' maxlength='11' placeholder='请输入手机号' name="userPhone"></input>
+    </label>
+    <label>
+      <image src='../../image/center_paperwork.png'></image>
+      <input type='idcard' placeholder='请输入身份证' name="userIdCard"></input>
+    </label>
+    <label>
+      <image src='../../image/center_navigation.png'></image>
+      <input type='text' placeholder='请输入收货地址' name="userAddress"></input>
+    </label>
+    <button form-type="submit">提交</button>
+  </form>
+
+</view>

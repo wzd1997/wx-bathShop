@@ -1,0 +1,58 @@
+<!--pages/recharge/recharge.wxml-->
+<navigator class='information bg_fff' url='/pages/memberCenter/memberCenter'>
+  <view class='font_999'>
+    <image src='../../image/erweima.png'></image>
+    <text>余额：100元</text>
+    <text>门票：20/张</text>
+  </view>
+  <image src='../../image/setup.jpg'></image>
+</navigator>
+<view class='title'>充值金额</view>
+<view class='rechaerge bg_fff'>
+  <view class='typeTitle'>
+    <text>丨充值卡套餐</text>
+    <view class='cardRe'>
+      <block wx:for='{{ rechargeData }}' wx:if='{{ item.type=="card" }}'>
+        <view bindtap='checked' 
+          data-index="{{ index }}"
+        class='{{checkedIndex==index ? "active":"" }}'>
+          <view>{{ item.money }}元</view>
+          <view>送{{ item.presentNum }}{{ item.presentType }}</view>
+        </view>
+      </block>
+    </view>
+  </view>
+
+  <view class='typeTitle' style='padding-bottom: 30rpx;'>
+    <text>丨门票套餐</text>
+    <view class='cardRe'>
+      <block wx:for='{{ rechargeData }}' wx:if='{{ item.type=="ticket" }}'>
+        <view bindtap='checked' data-index="{{ index }}" class='{{ checkedIndex==index ? "active":"" }}'>
+          <view>{{ item.money }}元</view>
+          <view>{{ item.presentNum }}{{ item.presentType }}</view>
+        </view>
+      </block>
+    </view>
+  </view>
+
+</view>
+<view style='width: 100%;height: 10px;background: #f5f5f5;'></view>
+<view class='rechargeBtn'>
+  <button>确认充值</button>
+</view>
+
+
+
+
+
+
+
+
+<view class='help_footer'></view>
+<!-- 底部导航 -->
+<view class='footer borderBox'>
+  <navigator wx:for="{{ footerNavigator }}" wx:key="{{ index }}" open-type="navigate" data-id='{{ index }}' class='{{index==3?"active":""}}' url="/pages/{{ item.url }}/{{ item.url }}">
+    <image src="{{ item.imgUrl }}" mode='widthFix'></image>
+    <text class='font_sm font_main'>{{ item.name }}</text>
+  </navigator>
+</view>

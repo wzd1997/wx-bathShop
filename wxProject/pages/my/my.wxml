@@ -1,0 +1,100 @@
+<view class='{{ openIf ? "wrapper":"" }}'>
+  <view class='head_bg'>
+    <view class='userMessage'>
+      <view class='userHeadImg'>
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+      <view class='userData font_sm'>
+        <view class='userDataOne'>
+          <view class='userName font font_fff'>
+            <open-data type="userNickName" lang="zh_CN"></open-data>
+          </view>
+          <view class='userNickname'>
+            <image src='../../image/my_love.png'></image>
+            <text>贵宾驾到</text>
+          </view>
+        </view>
+
+        <view class='userEnergy'>
+          <view>距离升级还差
+            <text class='font_fff'>1000</text> 能量</view>
+        </view>
+      </view>
+      <navigator url='/pages/memberCenter/memberCenter' class='memberCenter' open-type='navigate'>
+        <image src='../../image/my_member.png'></image>
+        <text class='font_sm'>会员中心</text>
+        <image src='../../image/youbian.png'></image>
+      </navigator>
+    </view>
+    <view class='userInfor font_sm font_fff'>
+      <view>
+        <text class='font'>20.33</text>
+        <text>余额</text>
+      </view>
+      <view>
+        <text class='font'>20</text>
+        <text>次数</text>
+      </view>
+      <view>
+        <text class='font'>20.33</text>
+        <text>红包</text>
+      </view>
+      <view>
+        <text class='font'>6600</text>
+        <text>积分</text>
+      </view>
+      <view>
+        <text class='font'>200.33</text>
+        <text>能量</text>
+      </view>
+    </view>
+  </view>
+
+  <view class='my_nav'>
+    <block wx:for="{{ userData.canUseFun }}" wx:key="{{ index }}">
+      <navigator url='{{ item.navUrl }}' class='font_sm'>
+        <image src='{{ item.imgUrl }}'></image>
+        <text>{{ item.name }}</text>
+      </navigator>
+    </block>
+  </view>
+
+  <view class='my_ads'>
+    <image src="../../image/gg_my.png" mode='widthFix'></image>
+  </view>
+
+  <view class='my_member_privilege bg_fff'>
+    <view class='font_de privilege_title'>会员特权</view>
+    <block wx:for="{{ memberPrivilege }}" wx:key="{{ index }}">
+      <view class='privilegeContent font_sm'>
+        <view>
+          <image src='{{ item.imgURL }}'></image>
+          <text>{{ item.name }}</text>
+        </view>
+        <text class='open' data-message='{{ item }}' bindtap='openPrivilege'>立即开通</text>
+      </view>
+    </block>
+
+  </view>
+
+  <view class='my_mask' hidden="{{!openIf}}">
+    <view class='openPrivilegeBox font_de'>
+      <image src='../../image/energy.png' mode='widthFix' style='width:400rpx;position:absolute;top:-40rpx; left:115rpx;'></image>
+      <view class='openTitle'>
+        <image src='../../image/my_member.png' mode='widthFix' style='width:50rpx;'></image>
+        <text>{{ privilegeName }}</text>
+      </view>
+      <view class='openContent font_999'>{{ privilegeContent }}</view>
+      <view>
+        <text>开通此特权将消耗您{{ privilegeEnergy }}积分</text>
+        <view class='font_main useDays'>合约期:{{ privilegeUseDays }}天</view>
+      </view>
+
+      <view class='openButton'>
+        <button class='openNo' bindtap='thinking'>我再想想</button>
+        <button class='openYes' bindtap='openNow'>立即开通</button>
+      </view>
+    </view>
+  </view>
+
+</view>

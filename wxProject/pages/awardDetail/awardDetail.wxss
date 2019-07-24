@@ -1,0 +1,87 @@
+/* pages/awardDetail/awardDetail.wxss */
+
+.award-detail-head {
+  display: flex;
+  flex-direction: column;
+}
+
+.award-detail-head > image {
+  width: 100%;
+}
+
+.award-some-msg {
+  box-sizing: border-box;
+  padding: 20rpx;
+  background: #fff;
+}
+
+.award-some-msg > view + view {
+  margin-top: 10rpx;
+}
+
+.award-integral text:last-child {
+  text-decoration: line-through;
+  margin-left: 20rpx;
+}
+
+.award-integral text:nth-child(2) {
+  margin-left: 10rpx;
+}
+
+.award-time {
+  border-top: 2rpx solid #f5f5f5;
+  padding-top: 20rpx;
+}
+
+.award-time image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 10rpx;
+}
+
+.award-time, .award-time>view {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.award-detail, .exchange-rule {
+  box-sizing: border-box;
+  margin-top: 20rpx;
+  padding: 0 20rpx;
+  background: #fff;
+}
+
+.award-detail view {
+  padding: 20rpx 0;
+}
+
+.award-detail image {
+  width: 100%;
+}
+
+.exchange-rule view {
+  padding: 20rpx 0;
+}
+
+.exchange-rule view + view {
+  border-top: 2rpx solid #ddd;
+}
+
+.exchange {
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  background: #fff;
+  padding: 20rpx 40rpx;
+  margin-top: 20rpx;
+}
+
+.exchange view {
+  box-sizing: border-box;
+  padding: 20rpx 0;
+
+  background: #13c2bd;
+  text-align: center;
+  color: #fff;
+}

@@ -1,0 +1,85 @@
+/* pages/pay/pay.wxss */
+page {
+  background: #fff;
+}
+.payHead {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 100rpx 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.orderValue {
+  font-weight: bold;
+  font-size: 80rpx;
+}
+.payType {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 20rpx 50rpx;
+}
+.payType image{
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50%;
+}
+.payType>view {
+  position: relative;
+  box-sizing: border-box;
+  padding: 20rpx 0;
+  border-bottom: 2rpx solid #f5f5f5;
+  display: flex;
+  /* justify-content: flex-start;
+  align-items: flex-start; */
+}
+.memberPay {
+  margin-left: 20rpx;
+  display: flex;
+  flex-direction: column;
+}
+.memberPay text+text {
+  margin-top: 10rpx;
+}
+image.wxImg {
+  width: 50rpx;
+  height: 50rpx;
+}
+.typeWx {
+  display: flex;
+  align-items: center;
+  margin-left: 10rpx;
+}
+.wxPay {
+  margin-left: 30rpx;
+}
+.sign {
+  box-sizing: border-box;
+  display: inline-block;
+  font-size: 24rpx;
+  color: #fff;
+  background: #FB6A3D;
+  padding: 2rpx 6rpx;
+  border-radius: 4rpx;
+  margin-left: 20rpx;
+}
+.checked,
+.no-checked {
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  margin-top: -20rpx;
+  right: 20rpx;
+  width: 40rpx!important;
+  height: 40rpx!important;
+  border-radius: 50%;
+}
+.no-checked {
+  border: 2rpx solid #ddd; 
+}
+.payOrder {
+  margin: 80% 5% 0 5%;
+  width: 90%;
+  color: #fff;
+  background: #fb6a3d;
+}

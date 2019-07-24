@@ -1,0 +1,105 @@
+<!-- 头部轮播图 -->
+<view class='banners'>
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px" bindchange="bindchange" style="height:{{imgheights[current]}}rpx;">
+
+    <swiper-item wx:for="{{imgUrls}}" wx:key="{{index}}">
+      <image src="{{item}}" mode='widthFix' class="slide-image" data-id='{{index}}' bindload="imageLoad" />
+    </swiper-item>
+  </swiper>
+</view>
+<!-- 导航 -->
+<view class='kindof'>
+  <block wx:for="{{indexImgUrl}}" wx:key="{{index}}">
+    <navigator url='{{ item.nav }}' class='nav' open-type='{{item.opentype}}' wx:if="{{ item.nav }}">
+      <image src='{{item.url}}' mode='widthFix' />
+      <text>{{ item.name }}</text>
+    </navigator>
+    <view class='nav' bindtap='{{ item.fn == "call" ? "callPhone" : "map" }}' wx:else>
+      <image src='{{item.url}}' mode='widthFix' />
+      <text>{{ item.name }}</text>
+    </view>
+  </block>
+
+</view>
+<!-- 超值热卖广告 -->
+<view class='index_hot_title'>
+  <text>超值热卖</text>
+</view>
+<view class='index_hot'>
+  <navigator class='gg_a'>
+    <image mode='widthFix' src="../../image/gg_a.png" />
+  </navigator>
+  <view class='index_hot_bce'>
+    <view class='index_hot_bc'>
+      <navigator class='gg_b'>
+        <image class='gg_b' src="../../image/gg_b.png" />
+      </navigator>
+      <navigator class='gg_c'>
+        <image class='gg_c' src="../../image/gg_c.png" />
+      </navigator>
+    </view>
+    <navigator class='gg_e'>
+      <image class='gg_e' src="../../image/gg_e.png" />
+    </navigator>
+  </view>
+</view>
+<!-- 中间广告 -->
+<navigator class='index_ads_mid'>
+  <image src="{{ indexAdsMidImgUrl }}"></image>
+</navigator>
+<!-- 团购推荐 -->
+<view class='index_hot_title'>
+  <text>团购推荐</text>
+</view>
+<!-- 团购套票列表 -->
+<view class='index_group'>
+  <block wx:for="{{ indexGroupData }}" wx:key="{{ index }}">
+    <navigator class='nav' url='/pages/groupDetail/groupDetail'>
+      <image src='{{ item.url }}' />
+      <view class='index_group_msg'>
+        <text class='index_group_title'>{{ item.title }}</text>
+        <text class='index_group_content'>{{ item.content }}</text>
+        <view class='index_group_sellMsg'>
+          <view class='index_group_price'>￥
+            <text>{{ item.price }}</text>元</view>
+          <view class='index_group_oriPrice'>原价：{{ item.oriPrice }}元</view>
+          <view class='index_group_sold'>已售{{ item.sold }}张</view>
+        </view>
+      </view>
+    </navigator>
+  </block>
+
+</view>
+
+<!-- 在线订房 -->
+<view class='index_hot_title'>
+  <text>在线订房</text>
+</view>
+<!-- 轮播图 -->
+<view class='index_ads_room'>
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px" style="height:310rpx;">
+    <swiper-item wx:for="{{roomImgUrls}}" wx:key="{{index}}">
+      <navigator>
+        <image src="{{item}}" mode='widthFix' class="slide-image" />
+      </navigator>
+    </swiper-item>
+  </swiper>
+</view>
+<!-- 客房列表 -->
+<view class='index_room'>
+  <block wx:for="{{ indexRoomData }}" wx:key="{{ index }}">
+    <navigator class='nav' url='/pages/room/room' open-type='switchTab'>
+      <image src='{{ item.url }}' />
+      <view class='index_room_msg'>
+        <view class='index_room_content'>
+          <view class='index_room_title'>{{ item.title }}</view>
+          <view class='index_room_type'>房型：{{ item.roomType }}</view>
+          <view class='index_room_type'>床型：{{ item.bedType }}</view>
+        </view>
+        <view class='index_room_price'>￥
+          <text>{{ item.price }}</text>
+        </view>
+      </view>
+    </navigator>
+  </block>
+</view>

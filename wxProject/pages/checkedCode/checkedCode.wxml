@@ -1,0 +1,31 @@
+<!--pages/payment/payment.wxml-->
+<canvas style="width: 750rpx; height: 600rpx;" canvas-id="bgCanvas"></canvas>
+
+
+
+<view class='bg_fff box'>
+  <view class='title'>核销码</view>
+  <view class='code'>TG20191001235959</view>
+
+  <view class='midLine'>
+    <view class='leftY'></view>
+    <view class='rightY'></view>
+  </view>
+
+
+  <view class='qr_code'>
+
+    <image src='../../image/erweima.png' mode='widthFix'></image>
+    <view class=' font_333 explain'>
+      <view>请于消费时出示</view>
+      <view>长按保存二维码，可作为消费凭证</view>
+    </view>
+
+    <view class='ads_img'>
+      <image mode='aspectFit' src='../../image/gg_top.png'></image>
+    </view>
+  </view>
+  <button class='back' bindtap='goback'>
+    返回订单
+  </button>
+</view>

@@ -1,0 +1,232 @@
+/* pages/my/my.wxss */
+
+.head_bg {
+  position: relative;
+  margin-top: -1000rpx;
+  margin-left: -375rpx;
+  width: 1500rpx;
+  height: 1500rpx;
+  border-radius: 50%;
+  background: linear-gradient(to right, #f44258, #f8457c);
+}
+
+.userHeadImg {
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.userNickname image, .memberCenter image {
+  width: 36rpx;
+  height: 36rpx;
+}
+
+.userMessage {
+  box-sizing: border-box;
+  width: 750rpx;
+  position: absolute;
+  left: 375rpx;
+  bottom: 320rpx;
+  display: flex;
+  align-items: center;
+  padding-left: 30rpx;
+}
+
+.userData {
+  margin-left: 20rpx;
+}
+
+.userDataOne {
+  display: flex;
+  align-items: center;
+}
+
+.userNickname {
+  background: #ff9c00;
+  color: #fff;
+  box-sizing: border-box;
+  padding: 2rpx 10rpx 2rpx 6rpx;
+  margin-left: 20rpx;
+  border-radius: 6rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.userEnergy {
+  margin-top: 12rpx;
+  box-sizing: border-box;
+  padding: 6rpx 20rpx;
+  border-radius: 22rpx;
+  background: rgba(0, 0, 0, 0.1);
+  color: #ff9c00;
+}
+
+.memberCenter {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 6rpx 0rpx 6rpx 10rpx;
+  border-top-left-radius: 24rpx;
+  border-bottom-left-radius: 24rpx;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.memberCenter text {
+  margin-left: 4rpx;
+}
+.userInfor {
+  box-sizing: border-box;
+  padding: 0 30rpx;
+  width: 750rpx;
+  position: absolute;
+  left: 375rpx;
+  bottom: 200rpx;
+  display: flex;
+  align-items: center;
+}
+.userInfor>view {
+  width: 138rpx;
+  height: 90rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.my_nav {
+  position: absolute;
+  top: 330rpx;
+  box-sizing: border-box;
+  width: 690rpx;
+  display: flex;
+  padding: 40rpx 0;
+  margin: 0 30rpx;
+  background: #fff;
+  border-radius: 20rpx;
+}
+.my_nav>navigator {
+   width: 138rpx;
+   height: 110rpx;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+}
+.my_nav image {
+  width: 60rpx;
+  height: 60rpx;
+}
+.my_ads {
+  position: relative;
+  top: 50rpx;
+  width: 750rpx;
+  box-sizing: border-box;
+  padding: 0 30rpx;
+}
+.my_ads image {
+  width: 690rpx;
+  border-radius: 20rpx;
+}
+.my_member_privilege {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  margin: 70rpx 30rpx 20rpx 30rpx;
+  padding: 0 50rpx;
+  border-radius: 20rpx;
+  width: 690rpx;
+  height: auto;
+  color: #6b6b6b;
+}
+.privilege_title {
+  box-sizing: border-box;
+  width: 690rpx;
+  border-left: 6rpx solid #FF734C;
+  padding-left: 20rpx; 
+  margin-top: 40rpx;
+  margin-bottom: 10rpx;
+}
+.privilegeContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2rpx solid #f5f5f5;
+}
+.privilegeContent>view {
+  display: flex;
+  align-items: center;
+  height: 90rpx;
+}
+.privilegeContent image  {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 30rpx;
+}
+.privilegeContent .open {
+  color:#135bd1;
+}
+.my_mask {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.3);
+  
+}
+.wrapper {
+  height: 100%;
+  overflow: hidden;
+}
+.openPrivilegeBox {
+  position: relative;
+  background: #fff;
+  width: 630rpx;
+  box-sizing: border-box;
+  padding-top: 60rpx;
+  padding-bottom: 20rpx;
+  margin: 400rpx 60rpx;
+  border-radius: 10rpx;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+}
+.openPrivilegeBox>view{
+  box-sizing: border-box;
+  margin: 0 40rpx; 
+  padding: 30rpx 0;
+  text-align: center;
+}
+.openButton {
+  display: flex;
+  align-items: center;
+}
+.openTitle {
+  display: flex;
+  align-items: flex-end;
+}
+.openTitle text{
+  margin-left: 20rpx;
+}
+.useDays {
+  margin-top: 10rpx;
+}
+.openContent {
+  border-top: 2rpx solid #f5f5f5;
+  border-bottom: 2rpx solid #f5f5f5;
+  text-align: left!important;
+}
+.openButton button{
+  width: 240rpx;
+  font-size: 28rpx;
+  background: #fff;
+  padding: 4rpx 0; 
+}
+button.openYes {
+  background: linear-gradient(to right, #fdeba0 , #e3ca59);
+  color: #7E4A16;
+}

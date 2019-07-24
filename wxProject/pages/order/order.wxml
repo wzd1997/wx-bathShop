@@ -1,0 +1,71 @@
+<!--pages/order/order.wxml-->
+<view class='topTabSwiper bg_fff'>
+  <view class='tab  {{currentData == 0 ? "tabBorer" : ""}}' data-current="0" bindtap='checkCurrent'>全部</view>
+  <view class='tab  {{currentData == 1 ? "tabBorer" : ""}}' data-current="1" bindtap='checkCurrent'>待付款</view>
+  <view class='tab  {{currentData == 2 ? "tabBorer" : ""}}' data-current="2" bindtap='checkCurrent'>未使用</view>
+  <view class='tab  {{currentData == 3 ? "tabBorer" : ""}}' data-current="3" bindtap='checkCurrent'>待评价</view>
+  <view class='tab  {{currentData == 4 ? "tabBorer" : ""}}' data-current="4" bindtap='checkCurrent'>退款/售后</view>
+</view>
+<swiper current="{{currentData}}" class='swiper' style="height:{{ swiperHeight }}rpx;" duration="300" bindchange="bindchange">
+  <swiper-item>
+    <scroll-view scroll-y style="height:{{ swiperHeight }}rpx;">
+      <view class='order-item'>
+        <view class='left'>
+          <image src='../../image/gg_h.png'></image>
+          <view class='font_999 font_14'>
+            <view class='title font_333 font'>超值商旅标准房</view>
+            <view class='time'>2019-10-01 23:59:59</view>
+            <view class='price'>总价：￥1368元</view>
+          </view>
+        </view>
+        <view class='right font_main font_14'>
+          <view class='status'>已付款</view>
+          <view class='handle'>去使用</view>
+        </view>
+      </view>
+    </scroll-view>
+  </swiper-item>
+  <swiper-item>
+    <scroll-view scroll-y style="height:{{ swiperHeight }}rpx;">
+      <view class='noOrder'>
+        <image mode='widthFix' src='../../image/order_status.png'></image>
+        <text class='font_999 font_de'>没有此类订单</text>
+      </view>
+    </scroll-view>
+  </swiper-item>
+  <swiper-item>
+    <scroll-view scroll-y style="height:{{ swiperHeight }}rpx;">
+      <view class='order-item'>
+        <view class='left'>
+          <image src='../../image/gg_h.png'></image>
+          <view class='font_999 font_14'>
+            <view class='title font_333 font'>超值商旅标准房</view>
+            <view class='time'>2019-10-01 23:59:59</view>
+            <view class='price'>总价：￥1368元</view>
+          </view>
+        </view>
+        <view class='right font_main font_14'>
+          <view class='status'>已付款</view>
+          <view class='handle' bindtap='toUse'>去使用</view>
+          <view class='refuse'>退款</view>
+        </view>
+      </view>
+    </scroll-view>
+  </swiper-item>
+  <swiper-item>
+     <scroll-view scroll-y style="height:{{ swiperHeight }}rpx;">
+      <view class='noOrder'>
+        <image mode='widthFix' src='../../image/order_status.png'></image>
+        <text class='font_999 font_de'>没有此类订单</text>
+      </view>
+    </scroll-view>
+  </swiper-item>
+  <swiper-item>
+     <scroll-view scroll-y style="height:{{ swiperHeight }}rpx;">
+      <view class='noOrder'>
+        <image mode='widthFix' src='../../image/order_status.png'></image>
+        <text class='font_999 font_de'>没有此类订单</text>
+      </view>
+    </scroll-view>
+  </swiper-item>
+</swiper>

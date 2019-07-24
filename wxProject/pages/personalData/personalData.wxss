@@ -1,0 +1,78 @@
+/* pages/personalData/personalData.wxss */
+
+.center_bg {
+  width: 100%;
+  border-radius: 0px 0px 105px 0px;
+}
+
+.personal_data_head {
+  position: absolute;
+  top: 70rpx;
+  left: 100rpx;
+}
+
+.personal_data_head_img {
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+  border: 6rpx solid #f78f8c;
+}
+
+.personal_data_head_img image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.formBox {
+  position: relative;
+  top: -210rpx;
+  box-sizing: border-box;
+  margin: 0 5%;
+  padding: 80rpx;
+  width: 90%;
+  border-radius: 40rpx;
+  background: #fff;
+}
+
+.formBox label {
+  box-sizing: border-box;
+  height: 80rpx;
+  padding: 20rpx 34rpx;
+  border-radius: 40rpx;
+  background: #f0f0f0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.formBox label + label {
+  margin-top: 30rpx;
+}
+.formBox input {
+  margin-left: 30rpx;
+}
+
+.input-placeholder {
+  font-size: 28rpx;
+}
+
+.formBox image {
+  width: 40rpx;
+  height: 40rpx;
+  color: #9c9c9c;
+}
+
+.formBox input {
+  width: 370rpx;
+  vertical-align: middle;
+}
+.formBox button {
+  margin-top: 50rpx;
+  width: 515rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: #fff;
+  border-radius: 40rpx;
+  background: linear-gradient(to right, #fb6a3d, #ff2424);
+}

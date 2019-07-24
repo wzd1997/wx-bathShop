@@ -1,0 +1,110 @@
+<!--pages/orderDetail/orderDetail.wxml-->
+<!-- 图片 -->
+<view class='order_article'>
+  <image src='../../image/order_article.jpg' mode='widthFix'></image>
+</view>
+
+<!-- 套票信息 -->
+<view class='orderTitle bg_fff'>
+  <image src='../../image/gg_g.png'></image>
+  <view>
+    <text class='font_de'>{{ orderName }}</text>
+    <text class='font_999 font_sm'>门票+毛巾+浴品+澡巾+搓澡+足底按摩30分钟+汗蒸+大厅休息+过夜费</text>
+  </view>
+</view>
+
+<!-- 套票价格 -->
+<view class='orderMsg bg_fff font_14 font_666'>
+  <view class='price'>
+    <text>单价</text>
+    <text>￥{{ price }}</text>
+  </view>
+
+  <view class='count'>
+    <text>数量</text>
+    <text>{{ count }}</text>
+  </view>
+
+  <view class='computer'>
+    <view>小计</view>
+    <view class='font_main'>￥{{ allPrice }}</view>
+  </view>
+</view>
+
+<!-- 支付信息 -->
+<view class='payMsg bg_fff font_14 font_666'>
+  <text class='font_de'>支付信息</text>
+  <view class='rebate' bindtap='chooseRebate'>
+    <view>红包/卡卷</view>
+    <view>
+      <view>{{ rebateName }}</view>
+      <view class='rightAngle'></view>
+    </view>
+  </view>
+  <view class='originPrice'>
+    <view>原价</view>
+    <view>￥{{ originPrice }}</view>
+  </view>
+  <view class='off font_main'>
+    <view>优惠</view>
+    <view class='font_main'>￥{{ off }}</view>
+  </view>
+  <view class='pay font_main'>
+    <view>实付</view>
+    <view class=''>￥{{ pay }}</view>
+  </view>
+</view>
+
+<!-- 订单信息 -->
+<view class='orderInfo bg_fff font_14 font_999'>
+  <text class='font_de font_666'>订单信息</text>
+  <view>订单编号：
+    <text>2019100123595933333</text>
+  </view>
+  <view>订单时间：
+    <text>2019-10-01 23:59:59</text>
+  </view>
+  <view>用户姓名：
+    <text>周杰伦</text>
+  </view>
+  <view>用户电话：
+    <text>12345678910</text>
+  </view>
+</view>
+
+<button class='payOrder' bindtap='payOrder' data-order-msg='{{ pay }},{{ orderName }}'>立即支付</button>
+
+<!-- 红包遮罩层 -->
+<view class='rebateMask {{ chooseRebate }}'>
+  <view class='redBox'>
+    <view class='rebate_title font'>选择红包/卡卷</view>
+    <view class='rebate_list'>
+      <scroll-view scroll-y style='height:468rpx;'>
+        <!-- 还需要传红包名称数值 -->
+        <block wx:for="{{ rebateList }}" wx:key="index">
+          <view class='rebate_item_pa' bindtap='chooseThisRebate' data-this-rebate='{{ item }}'>
+            <view class='rebate_item bg_fff'>
+              <view class='up'>
+                <view class='font_main'>￥{{ item.value }}</view>
+                <view class='rebate_type'>
+                  <text class='font_de'>{{ item.name }}</text>
+                  <text class='font_sm font_main'>{{ item.type }}</text>
+                </view>
+              </view>
+              <view class='down font_sm font_666'>
+                {{ item.limit }}
+              </view>
+              <image class='checked' src='../../image/duihao.png' wx:if="{{ rId == item.id }}"></image>
+              <view class='checked' wx:else></view>
+              <view class='leftO'></view>
+              <view class='rightO'></view>
+            </view>
+          </view>
+        </block>
+      </scroll-view>
+    </view>
+    <view class='closeMask' bindtap='closeMask'>
+      <image src='../../image/off.png'></image>
+    </view>
+  </view>
+</view>

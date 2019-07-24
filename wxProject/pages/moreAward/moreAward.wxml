@@ -1,0 +1,69 @@
+<!--pages/integralShop/integralShop.wxml-->
+<view class='integralShop-head-page font_14 bg_fff'>
+  <view class='integral'>
+    <image src='../../image/shop_1.png'></image>
+    <text>积分<text class='font_main'>0</text></text>
+  </view>
+  <view class='record' bindtap='goExchangeRecord'>
+    <image src='../../image/shop_2.png'></image>
+    <text>兑换记录</text>
+  </view>
+</view>
+
+<swiper indicator-dots="{{ indicatorDots }}" autoplay="{{ autoplay }}" circular="{{ circular }}">
+  <block wx:for="{{imgUrls}}" wx:key="index">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" />
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class='integralShop-nav font_14 bg_fff'>
+  <navigator url='/pages/index/index' open-type='switchTab'>
+    <image src='../../image/icon_index1.png'></image>
+    <text>门店首页</text>
+  </navigator>
+  <navigator url='/pages/memberExplain/memberExplain'>
+    <image src='../../image/icon_index10.png'></image>
+    <text>积分规则</text>
+  </navigator>
+  <navigator url='/pages/activity/activity'>
+    <image src='../../image/icon_index4.png'></image>
+    <text>赢积分</text>
+  </navigator>
+  <navigator url='/pages/exchangeRecord/exchangeRecord'>
+    <image src='../../image/icon_index9.png'></image>
+    <text>兑换记录</text>
+  </navigator>
+  <navigator url='/pages/memberCenter/memberCenter'>
+    <image src='../../image/icon_index5.png'></image>
+    <text>会员中心</text>
+  </navigator>
+</view>
+
+<view class='award-list'>
+
+  <view class='award-item font_14'>
+    <image src='../../image/award1.jpg'></image>
+    <text>创意七彩小书灯</text>
+    <view class='font_main'>3000积分
+      <text class='font_999 font_13'>￥999</text>
+    </view>
+  </view>
+  <view class='award-item font_14'>
+    <image src='../../image/award1.jpg'></image>
+    <text>创意七彩小书灯</text>
+    <view class='font_main'>3000积分
+      <text class='font_999 font_13'>￥999</text>
+    </view>
+  </view>
+  <view class='award-item font_14'>
+    <image src='../../image/award1.jpg'></image>
+    <text>创意七彩小书灯</text>
+    <view class='font_main'>3000积分
+      <text class='font_999 font_13'>￥999</text>
+    </view>
+  </view>
+
+</view>
+

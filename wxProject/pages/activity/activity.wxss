@@ -1,0 +1,101 @@
+/* pages/activity/activity.wxss */
+page{
+  background:#AF1418 
+}
+.activity-head-image {
+  width: 100%;
+}
+.select-nav {
+  /* margin-top: -100rpx; */
+  box-sizing: border-box;
+  width: 90%;
+  padding: 20rpx;
+  margin:-20% 5% 0 5%;
+  border-radius: 10rpx;
+  filter: drop-shadow(0px 0px 6rpx #fff);
+  display: flex;
+  justify-content: space-around;
+  align-items: center; 
+}
+.select-nav image {
+  width: 80rpx;
+  height: 80rpx;
+}
+.select-nav>view{
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.select-nav>view text {
+  margin-top: 10rpx;
+}
+.activityBack {
+  box-sizing: border-box;
+  padding: 16rpx 60rpx;
+  font-size: 30rpx;
+  background: red;
+  width: 30%;
+  border-radius: 10rpx;
+  text-align: center;
+  margin: 40rpx auto;
+  color: #fff;
+}
+.activity-list {
+  width: 90%;
+  box-sizing: border-box;
+  margin: 37rpx auto;
+}
+.activity-item {
+  border-radius: 10rpx;
+  width: 100%;
+  background:#fff;
+  display: flex;
+  flex-direction: column;
+}
+.activity-item + .activity-item {
+  margin-top: 38rpx;
+}
+.activity-item > view{
+  box-sizing: border-box;
+  padding: 20rpx;
+}
+.activity-item > text {
+  padding: 10rpx 20rpx 0 20rpx;
+}
+.activity-item > text:last-child {
+  padding-bottom: 20rpx;
+}
+.activity-item>image{
+  width: 100%;
+}
+.activity-item.next {
+  filter: brightness(70%)
+}
+.activity-item.end {
+  filter: grayscale(50%) brightness(70%)
+}
+.activity-time {
+  display: flex;
+  align-items: center;
+}
+.activity-time text {
+  display: inline-block;
+  width: 16rpx;
+  height: 16rpx;
+  border-radius: 50%;
+  background: #2ed759;
+}
+.next .activity-time text {
+  background: #ff0;
+}
+.end .activity-time text {
+  background: #f00;
+}
+
+.activity-time view{
+  margin-left: 20rpx;
+}
+.none {
+  display: none;
+}

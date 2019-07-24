@@ -1,0 +1,59 @@
+<image class="activity-head-image" mode="widthFix" src="../../image/activity.jpg"></image>
+<view class='select-nav font_999 bg_fff font_14'>
+  <view bindtap="statusSelect" data-status="all">
+    <image src='../../image/activity_hd1.png'></image>
+    <text>全部</text>
+  </view>
+  <view bindtap="statusSelect" data-status="next">
+    <image src='../../image/activity_hd2.png'></image>
+    <text>即将开始</text>
+  </view>
+  <view bindtap="statusSelect" data-status="ing">
+    <image src='../../image/activity_hd3.png'></image>
+    <text>进行中</text>
+  </view>
+  <view bindtap="statusSelect" data-status="end">
+    <image src='../../image/activity_hd4.png'></image>
+    <text>已结束</text>
+  </view>
+</view>
+
+<view class='activity-list font_14'>
+
+  
+
+  <navigator class='activity-item ing {{ (status == "all" || status == "ing") ? "" : "none"}}' open-type='switchTab' url='/pages/index/index'>
+    <view class='activity-time'>
+      <text></text>
+      <view>本次活动距离结束还有：8天20时30分</view>
+    </view>
+    <image src='../../image/activity1.jpg' mode='widthFix'></image>
+    <text class='activity-title font_bold'>幸运大转盘转出好运来</text>
+    <text class='activity-introduce font_666'>七月仲夏清爽夏日，幸运大转盘！</text>
+  </navigator>
+
+  <navigator class='activity-item next {{ (status == "all" || status == "next") ? "" : "none"}}' open-type='switchTab' url='/pages/index/index'>
+    <view class='activity-time'>
+      <text></text>
+      <view>本次活动距离结束还有：8天20时30分</view>
+    </view>
+    <image src='../../image/activity1.jpg' mode='widthFix'></image>
+    <text class='activity-title font_bold'>幸运大转盘转出好运来</text>
+    <text class='activity-introduce font_666'>七月仲夏清爽夏日，幸运大转盘！</text>
+  </navigator>
+
+  <navigator class='activity-item end {{ (status == "all" || status == "end") ? "" : "none"}}' open-type='switchTab' url='/pages/index/index'>
+    <view class='activity-time'>
+      <text></text>
+      <view>本次活动距离结束还有：8天20时30分</view>
+    </view>
+    <image src='../../image/activity1.jpg' mode='widthFix'></image>
+    <text class='activity-title font_bold'>幸运大转盘转出好运来</text>
+    <text class='activity-introduce font_666'>七月仲夏清爽夏日，幸运大转盘！</text>
+  </navigator>
+
+</view>
+
+
+
+<navigator class='activityBack' open-type='navigateBack' delta='1'>返回</navigator>

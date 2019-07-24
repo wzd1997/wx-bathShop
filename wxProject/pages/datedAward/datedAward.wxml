@@ -1,0 +1,14 @@
+<!--pages/datedProduct/datedProduct.wxml-->
+<view class='awardList'>
+  <view class='award-item'>
+    <image class='award-img' src='../../image/11.jpg'></image>
+    <view class='awardMsg font_14 font_666'>
+      <view class='award-title font_333 font_de'>iphoneXR</view>
+      <view class='award-time'>有效期：2019-01-01</view>
+      <view class='award-status'>已核销</view>
+    </view>
+    <image class='more' src='../../image/setup.jpg'></image>
+    <image class='dated' mode='widthFix' src='../../image/rebate_null.png'></image>
+  </view>
+</view>
+<navigator open-type='navigateBack' delta='1' class='back font_de'>返回</navigator> 

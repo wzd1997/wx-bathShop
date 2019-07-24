@@ -1,0 +1,95 @@
+/* pages/energy/energy.wxss */
+
+.bg {
+  position: relative;
+  width: 750rpx;
+  height: 400rpx;
+  background: linear-gradient(to right, #d4b97e, #bc994c);
+}
+
+.icon {
+  width: 400rpx;
+  height: 400rpx;
+  border: 50rpx solid #fff;
+  opacity: 0.1;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateZ(45deg);
+  position: absolute;
+  right: -100rpx;
+  top: 120rpx;
+}
+
+.icon> view {
+  width: 180rpx;
+  height: 180rpx;
+  background: #fff;
+}
+
+.energyExplain image {
+  width: 36rpx;
+  height: 36rpx;
+  filter: brightness(900%);
+}
+
+.energy-title {
+  position: absolute;
+  top: 32%;
+  left: 40rpx;
+}
+
+.energyExplain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 4rpx 0 4rpx 20rpx;
+  background: rgba(0, 0, 0, 0.1);
+  width: 170rpx;
+  border-top-left-radius: 50rpx;
+  border-bottom-left-radius: 50rpx;
+  position: absolute;
+  top: 30rpx;
+  right: 0;
+}
+
+.type-page {
+  box-sizing: border-box;
+  padding: 0 10rpx;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  top: 84%;
+}
+
+.type-page>view {
+  box-sizing: border-box;
+  border-radius: 10rpx; 
+  padding: 26rpx 0;
+  width: 42%;
+  text-align: center;
+  color: #bc994c;
+  background: #fff;
+}
+
+.active {
+  box-shadow: rgb(188, 153, 76) 0px 0px 8px 1px;
+}
+
+.back {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 20rpx 0;
+  color: #fff;
+  font-size: 30rpx;
+  background: linear-gradient(to right, #bc994c, #d4b97e);
+}

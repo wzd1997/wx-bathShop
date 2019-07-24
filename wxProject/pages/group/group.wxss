@@ -1,0 +1,16 @@
+/* pages/commodity/commodity.wxss */
+
+.commodity_title {
+  margin-top: 20rpx;
+  padding: 20rpx 30rpx;
+  display: flex;
+  align-items: center;
+}
+
+.commodity_title text {
+  margin-left: 10rpx;
+}
+
+.commodity_title image {
+  width: 40rpx;
+}

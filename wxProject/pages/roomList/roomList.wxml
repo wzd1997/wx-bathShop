@@ -1,0 +1,277 @@
+<view class='{{ roomMaskShow ? "noScrollY" : "" }}'>
+
+
+  <view class='headImg'>
+    <swiper autoplay="true" circular="true">
+      <swiper-item wx:for="{{headerHotelData.headerImg}}" wx:key="{{index}}">
+        <image src="{{item}}" class="slide-image" />
+      </swiper-item>
+    </swiper>
+  </view>
+  <view class='head_address bg_fff'>
+    <image src='{{ headerHotelData.addressImg }}' mode='widthFix' bindtap='map'></image>
+    <view class='font_sm'>
+      <text class='font_de font_333'>{{ headerHotelData.address }}</text>
+      <text class='font_999'>{{ headerHotelData.addressMore }}</text>
+    </view>
+    <image src='../../image/tel.png' mode='widthFix' bindtap='call'></image>
+  </view>
+  <view class='head_content bg_fff'>
+    <view>
+
+      <view class='head_time font_sm font_bold'>
+        <text class='fitTime'>{{ headerHotelData.fitTime }}</text>
+        <text>装修</text>
+        <text class='Time'>{{ headerHotelData.startTime }}</text>
+        <text>开业</text>
+      </view>
+
+      <view class='head_icon'>
+        <block wx:for="{{ headerHotelData.functionIcon }}" wx:for-index="i" wx:for-item="item" wx:key="index">
+          <view wx:if="{{i >= 4}}">
+            <image src='{{ item.iconUrl }}' mode='widthFix' wx:if="{{i >= 4}}"></image>
+            <text class='font_sm font_999' wx:if="{{i >= 4}}">{{ item.iconName }}</text>
+          </view>
+        </block>
+
+      </view>
+
+    </view>
+
+    <navigator class='navTo' url='/pages/shopMsg/shopMsg' open-type='navigate'>
+      <text class='font_999'>门店详情</text>
+      <image src="../../image/setup.jpg" mode='widthFix'></image>
+    </navigator>
+  </view>
+
+  <view class='timeChoose bg_fff'>
+   
+    <view class='swiper' style="height:140rpx;">
+
+      <view wx:if="{{roomType == 'day'}}">
+        <view class='swiper_con'>
+          <view class='font_sm dayRoom font_999'>
+            <picker mode="date" value="{{startDate}}" start="{{startDate}}" end="2020-12-31" bindchange="startDateChange">
+              <view>
+                入住时间
+              </view>
+              <view class='font_main font_de'>{{startDate}}</view>
+            </picker>
+            <view class='dayNum'>
+              <view>共
+                <text> {{ checkInDayNum }} </text>晚</view>
+            </view>
+            <picker mode="date" value="{{endDate}}" start="{{startDate}}" end="2020-12-31" bindchange="endDateChange">
+              <view class="picker">
+                <view>离店时间</view>
+                <view class='font_main font_de'>{{endDate}}</view>
+              </view>
+            </picker>
+          </view>
+        </view>
+      </view>
+
+      <view wx:if="{{roomType == 'hours'}}">
+        <view class='swiper_con'>
+          <view class='font_sm dayRoom font_999 hoursRoomChoose'>
+            <picker bindchange="bindPickerChange" value="{{hoursTypeIndex}}" range="{{hoursTypeList}}">
+              <view class="picker">
+                <view class='font_de'>
+                  {{hoursTypeList[hoursTypeIndex]}}
+                </view>
+              </view>
+            </picker>
+
+            <picker mode="date" value="{{today}}" start="{{today}}" end="2020-12-31" bindchange="todayChange">
+              <view class="picker">
+                <view class='font_de'>{{today}}</view>
+              </view>
+            </picker>
+          </view>
+  
+        </view>
+      </view>
+
+    </view>
+  </view>
+
+
+  <!-- 订房列表 -->
+  <view class='commodityList'>
+    <view class='commodityListSelect font_sm'>
+      <view style='width:190rpx'>
+        <text>类型：</text>
+        <picker bindchange="typeChange" value="{{typeIndex}}" range="{{typeList}}">
+          <view class="picker">
+            <view>
+              {{typeList[typeIndex]}}
+            </view>
+          </view>
+        </picker>
+      </view>
+      <view style='width:190rpx'>
+        <text>房型：</text>
+        <picker bindchange="roomTypeChange" value="{{roomTypeIndex}}" range="{{roomTypeList}}">
+          <view class="picker">
+            <view>
+              {{roomTypeList[roomTypeIndex]}}
+            </view>
+          </view>
+        </picker>
+      </view>
+      <view style='width:310rpx'>
+        <text>床型：</text>
+        <picker bindchange="bedTypeChange" value="{{bedTypeIndex}}" range="{{bedTypeList}}">
+          <view class="picker">
+            <view>
+              {{bedTypeList[bedTypeIndex]}}
+            </view>
+          </view>
+        </picker>
+      </view>
+
+    </view>
+    <view wx:for="{{ roomData }}" wx:key="{{ index }}" class="{{((roomTypeList[roomTypeIndex] == item.roomType)||roomTypeList[roomTypeIndex] == '全部')&&((typeList[typeIndex] == item.type)||typeList[typeIndex] == '全部')&&((bedTypeList[bedTypeIndex] == item.bedType)||bedTypeList[bedTypeIndex] == '全部')? 'active':''}}">
+      <block wx:if="{{((roomTypeList[roomTypeIndex] == item.roomType)||roomTypeList[roomTypeIndex] == '全部')&&((typeList[typeIndex] == item.type)||typeList[typeIndex] == '全部')&&((bedTypeList[bedTypeIndex] == item.bedType)||bedTypeList[bedTypeIndex] == '全部')}}">
+        <view class='commodity_tag'>{{ item.tag }}</view>
+        <image src='{{ item.url }}' />
+        <view class='commodityList_msg'>
+
+          <view class='commodityList_title'>
+            <text>{{ item.title }}</text>
+          </view>
+
+          <view class='font_14 font_999'>
+            <view>房型：{{ item.roomType }}</view>
+          </view>
+          <view class='font_14 font_999'>
+            <view>床型：{{ item.bedType }}</view>
+          </view>
+
+        
+    
+            <view class='commodity_list_buy' bindtap='showRoomMask'>
+              <view class='font_13 bg_main font_fff'>抢购</view>
+              <view class='font_16 bg_fff font_main'>￥{{ item.price }}</view>
+            </view>
+
+
+        </view>
+      </block>
+
+    </view>
+  </view>
+
+  <view class='comment bg_fff '>
+    <view class='comment_titel'>
+      <text class='font_de'>网友点评</text>
+      <text class='font_sm font_main'>{{commentNum}}条评论</text>
+    </view>
+
+    <view class='comment_tag'>
+      <block wx:for="{{ commentType }}" wx:key="index">
+        <view class='font_sm'>
+          <text>{{ item.name }}</text> (
+          <text>10</text>)
+        </view>
+      </block>
+    </view>
+
+    <view class='comment_list'>
+      <block wx:for="{{ commentData }}" wx:key="index">
+        <view class='comment_item'>
+
+          <view class='comment_msg'>
+            <image class='comment_headImg' src='{{ item.headImgUrl }}'></image>
+
+            <view class='comment_name font'>{{ item.name }}</view>
+            <view class='comment_starAndTime  font_sm'>
+              <view>
+                <text>评分</text>
+                <image src='../../image/star{{item.star}}.png' mode='widthFix'></image>
+              </view>
+              <view class='font_sm comment_time'>{{ item.time }}</view>
+            </view>
+
+
+          </view>
+
+          <view class='comment_text font_sm'>
+            <text class='font_999'>{{ item.content }}</text>
+            <view class='comment_reply'>
+              <text>商家回复：</text>
+              <text>{{ item.reply }}</text>
+            </view>
+          </view>
+        </view>
+
+      </block>
+    </view>
+  </view>
+</view>
+
+<!-- 抢购遮罩层 -->
+<view class='roomMask' wx:if='{{ roomMaskShow }}'>
+  <view style='position:relative'>
+    <view class='showBox'>
+      <view class='title'>房名</view>
+      <image bindtap='closeRoomMask' src='../../image/cha.png'></image>
+      <view class='roomMaskPPT'>
+        <swiper autoplay="true" circular="true" vertical="true">
+          <swiper-item>
+            <image src="../../image/gg_f.png" class="slide-image" />
+          </swiper-item>
+          <swiper-item>
+            <image src="../../image/gg_f.png" class="slide-image" />
+          </swiper-item>
+          <swiper-item>
+            <image src="../../image/gg_f.png" class="slide-image" />
+          </swiper-item>
+        </swiper>
+      </view>
+      <scroll-view class='room-description' scroll-y style='height:510rpx;'>
+        <view class='roomDetail font_14 font_999'>
+          <view>
+            <view>上网
+              <text space="ensp"> wifi</text>
+            </view>
+            <view>窗户
+              <text space="ensp"> wifi</text>
+            </view>
+            <view>床型
+              <text space="ensp"> 1.8m×2.0m 1张床</text>
+            </view>
+          </view>
+          <view class='roomDetail_item_right'>
+            <view>卫浴
+              <text space="ensp"> 有</text>
+            </view>
+            <view>可住
+              <text space="ensp"> 2人</text>
+            </view>
+            <view>早餐
+              <text space="ensp"> 无</text>
+            </view>
+          </view>
+        </view>
+
+        <view class='cancel-rule'>
+          <view class='cancel-rule-title font_bold font_de'>取消规则</view>
+          <text class='cancel-rule-contnet font_14'>askljdklsajdklasjkdlj
+        askljdklsajdklasjkdljaskljdklsajdklasjkdljs</text>
+        </view>
+
+        <view class='use-rule'>
+          <view class='use-rule-title font_bold font_de'>使用规则</view>
+          <view class='use-rule-contnet font_14'>
+            1.kasjd;laskjdklasjd;klasjkdasjd 2.kasjd;laskjdklasjd;klasjkdasjd 3.kasjd;laskjdklasjd;klasjkdasjd
+          </view>
+        </view>
+
+
+      </scroll-view>
+
+    </view>
+    <view class='appoint font_fff font'>￥9999马上预约</view>
+  </view>
+</view>

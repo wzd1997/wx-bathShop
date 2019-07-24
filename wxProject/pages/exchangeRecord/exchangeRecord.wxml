@@ -1,0 +1,3 @@
+<!--pages/exchangeRecord/exchangeRecord.wxml-->
+<view class='seeDated' bindtap='datedAward'>查看过期奖品</view>
+<navigator open-type='navigateBack' delta='1' class='back font_de'>返回</navigator> 

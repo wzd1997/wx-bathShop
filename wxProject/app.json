@@ -1,0 +1,83 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/roomList/roomList",
+    "pages/activity/activity",
+    "pages/awardDetail/awardDetail",
+    "pages/integralShop/integralShop",
+    "pages/energy/energy",
+    "pages/datedAward/datedAward",
+    "pages/roomOrder/roomOrder",
+    "pages/room/room",
+    "pages/pay/pay",
+    "pages/orderDetail/orderDetail",
+    "pages/groupOrder/groupOrder",
+    "pages/checkedCode/checkedCode",
+    "pages/memberPayCode/memberPayCode",
+    "pages/order/order",
+    "pages/groupDetail/groupDetail",
+    "pages/shopShow/shopShow",
+    "pages/memberExplain/memberExplain",
+    "pages/bill/bill",
+    "pages/getRebate/getRebate",
+    "pages/redEnvelopes/redEnvelopes",
+    "pages/memberCenter/memberCenter",
+    "pages/personalData/personalData",
+    "pages/shopMsg/shopMsg",
+    "pages/recharge/recharge",
+    "pages/my/my",
+    "pages/group/group",
+    "pages/useRules/useRules",
+    "pages/exchangeRecord/exchangeRecord",
+    "pages/moreAward/moreAward"
+      ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#EB5D39",
+    "borderStyle": "black",
+    "list": [
+      {
+        "selectedIconPath": "image/have_icon1.png",
+        "iconPath": "image/foot_icon1.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "image/have_icon2.png",
+        "iconPath": "image/foot_icon2.png",
+        "pagePath": "pages/group/group",
+        "text": "团购"
+      },
+      {
+        "selectedIconPath": "image/have_icon3.png",
+        "iconPath": "image/foot_icon3.png",
+        "pagePath": "pages/room/room",
+        "text": "订房"
+      },
+      {
+        "selectedIconPath": "image/have_icon4.png",
+        "iconPath": "image/foot_icon4.png",
+        "pagePath": "pages/order/order",
+        "text": "订单"
+      },
+      {
+        "selectedIconPath": "image/have_icon5.png",
+        "iconPath": "image/foot_icon5.png",
+        "pagePath": "pages/my/my",
+        "text": "我的"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "是否允许获取你的地理位置信息"
+    }
+  }
+}

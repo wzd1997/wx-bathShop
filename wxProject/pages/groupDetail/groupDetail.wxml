@@ -1,0 +1,122 @@
+<view class='groupDetail'>
+
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{ circular }}">
+    <block wx:for="{{imgUrls}}" wx:key="index">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+
+
+  <view class='bg_fff headMsg'>
+    <view class='title font font_bold'>休闲足疗</view>
+    <view class='font_999 font_13 content'>门票+毛巾+浴品+汗蒸+足底按摩30分钟+大厅休息+过夜费仅需49元</view>
+
+    <view class='font_999 font_13 soldMsg'>
+      <view class='price'>
+
+        <view class='font_main'>￥
+          <text class='font_lg font_bold'>459.00</text>元</view>
+        <view>原价:
+          <text>88.00</text>元</view>
+
+      </view>
+
+      <view>已售165张</view>
+    </view>
+  </view>
+
+
+
+  <view class='topTabSwiper bg_fff'>
+    <view class='tab  {{currentData == 0 ? "tabBorer" : ""}}' data-current="0" bindtap='checkCurrent'>团购内容</view>
+    <view class='tab  {{currentData == 1 ? "tabBorer" : ""}}' data-current="1" bindtap='checkCurrent'>使用规则</view>
+    <view class='tab  {{currentData == 2 ? "tabBorer" : ""}}' data-current="2" bindtap='checkCurrent'>评价</view>
+  </view>
+</view>
+
+<swiper current="{{currentData}}" class='swiper bg_fff' style="height:{{ swiperHeight }}rpx;" duration="300" bindchange="bindchange">
+  <swiper-item>
+    <scroll-view scroll-y style='height:{{ swiperHeight }}rpx; '>
+      <text class='rich-text'>
+        嗯啊无所阿萨德萨达撒多打算氨基酸地方
+        安静安静大叔大婶大赛饿哦我IE欧文调色挖 
+      </text>
+      <view class='help-block'></view>
+
+    </scroll-view>
+  </swiper-item>
+
+  <swiper-item>
+    <scroll-view scroll-y style='height:{{ swiperHeight }}rpx'>
+      <text class='rich-text'></text>
+      <view class='help-block'></view>
+
+    </scroll-view>
+
+  </swiper-item>
+
+  <swiper-item>
+    <scroll-view scroll-y style='height:{{ swiperHeight + 112 }}rpx' bindscrolltolower="getMoreComment" >
+      <view class='comment bg_fff ' style='height: 100%;'>
+
+        <!-- <view class='comment_titel'>
+        <text class='font_de'>网友点评</text>
+        <text class='font_sm font_main'>{{commentNum}}条评论</text>
+      </view> -->
+
+        <view class='comment_tag'>
+          <block wx:for="{{ commentType }}" wx:key="index">
+            <view class='font_sm'>
+              <text>{{ item.name }}</text>
+              <text>(10)</text>
+            </view>
+          </block>
+        </view>
+
+        <view class='comment_list'>
+          <block wx:for="{{ commentData }}" wx:key="index">
+            <view class='comment_item'>
+
+              <view class='comment_msg'>
+                <image class='comment_headImg' src='{{ item.headImgUrl }}'></image>
+
+                <view class='comment_name font'>{{ item.name }}</view>
+                <view class='comment_starAndTime  font_sm'>
+                  <view>
+                    <text>评分</text>
+                    <image src='../../image/star{{item.star}}.png' mode='widthFix'></image>
+                  </view>
+                  <view class='font_sm comment_time'>{{ item.time }}</view>
+                </view>
+
+
+              </view>
+
+              <view class='comment_text font_sm'>
+                <text class='font_999'>{{ item.content }}</text>
+                <view class='comment_reply'>
+                  <text>商家回复：</text>
+                  <text>{{ item.reply }}</text>
+                </view>
+              </view>
+            </view>
+
+          </block>
+        </view>
+      </view>
+
+      <view class='help-block'></view>
+    </scroll-view>
+
+
+  </swiper-item>
+
+</swiper>
+
+
+<view class='pay font_lg font_main bg_fff'>
+  <view>￥459.00</view>
+  <button class='font_fff bg_main font_14'  bindtap='goGroupOrder' >立即抢购</button>
+</view>

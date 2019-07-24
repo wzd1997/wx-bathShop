@@ -1,0 +1,120 @@
+<view class='headImg'>
+  <image src='{{ headerHotelData.headerImg[0] }}' />
+</view>
+<view class='head_address bg_fff'>
+  <image src='{{ headerHotelData.addressImg }}' mode='widthFix' bindtap='map'></image>
+  <view class='font_sm'>
+    <text class='font_de font_333'>{{ headerHotelData.address }}</text>
+    <text class='font_999'>{{ headerHotelData.addressMore }}</text>
+  </view>
+  <image src='../../image/tel.png' mode='widthFix' bindtap='call'></image>
+</view>
+<view class='head_content bg_fff'>
+  <view>
+
+    <view class='head_time font_sm font_bold'>
+      <text class='fitTime'>{{ headerHotelData.fitTime }}</text>
+      <text>装修</text>
+      <text class='Time'>{{ headerHotelData.startTime }}</text>
+      <text>开业</text>
+    </view>
+
+    <view class='head_icon'>
+      <block wx:for="{{ headerHotelData.functionIcon }}" wx:for-index="i" wx:for-item="item" wx:key="index">
+        <view wx:if="{{i >= 4}}">
+          <image src='{{ item.iconUrl }}' mode='widthFix' wx:if="{{i >= 4}}"></image>
+          <text class='font_sm font_999' wx:if="{{i >= 4}}">{{ item.iconName }}</text>
+        </view>
+      </block>
+
+    </view>
+
+  </view>
+
+  <navigator class='navTo' url='{{ headerHotelData.navigateToUrl }}' open-type='navigate'>
+    <text class='font_999'>门店详情</text>
+    <image src="../../image/setup.jpg" mode='widthFix'></image>
+  </navigator>
+
+
+
+</view>
+
+<view class='commodity_title bg_fff'>
+  <image src='{{ group_title_imgUrl }}' mode='widthFix'></image>
+  <text class='font_de font_bold'>我的团购</text>
+</view>
+
+<view class='commodityList'>
+  <view wx:for="{{ groupData }}" wx:key="{{ index }}" class='active'>
+    <view class='commodity_tag'>{{ item.tag }}</view>
+    <image src='{{ item.url }}' />
+    <view class='commodityList_msg'>
+
+      <view class='commodityList_title'>
+        <text>{{ item.title }}</text>
+        <view class='commodityList_sold'>已售{{ item.sold }}张</view>
+      </view>
+
+      <text class='commodityList_content'>{{ item.content }}</text>
+
+      <view class='commodityList_sellMsg'>
+        <view class='commodityList_Allprice'>
+          <view class='commodityList_price'>￥
+            <text>{{ item.price }}</text>元</view>
+          <view class='commodityList_oriPrice'>原价：{{ item.oriPrice }}元</view>
+        </view>
+        <navigator class='commodity_buy' open-type='navigate' url="/pages/groupDetail/groupDetail">抢购</navigator>
+      </view>
+
+    </view>
+  </view>
+</view>
+<view class='comment bg_fff '>
+
+  <view class='comment_titel'>
+    <text class='font_de'>网友点评</text>
+    <text class='font_sm font_main'>{{commentNum}}条评论</text>
+  </view>
+
+  <view class='comment_tag'>
+    <block wx:for="{{ commentType }}" wx:key="index">
+      <view class='font_sm'>
+        <text>{{ item.name }}</text> (
+        <text>10</text>)
+      </view>
+    </block>
+  </view>
+
+  <view class='comment_list'>
+    <block wx:for="{{ commentData }}" wx:key="index">
+      <view class='comment_item'>
+
+        <view class='comment_msg'>
+          <image class='comment_headImg' src='{{ item.headImgUrl }}'></image>
+
+          <view class='comment_name font'>{{ item.name }}</view>
+          <view class='comment_starAndTime  font_sm'>
+            <view>
+              <text>评分</text>
+              <image src='../../image/star{{item.star}}.png' mode='widthFix'></image>
+            </view>
+            <view class='font_sm comment_time'>{{ item.time }}</view>
+          </view>
+
+
+        </view>
+
+        <view class='comment_text font_sm'>
+          <text class='font_999'>{{ item.content }}</text>
+          <view class='comment_reply'>
+            <text>商家回复：</text>
+            <text>{{ item.reply }}</text>
+          </view>
+        </view>
+      </view>
+
+    </block>
+  </view>
+</view>
+

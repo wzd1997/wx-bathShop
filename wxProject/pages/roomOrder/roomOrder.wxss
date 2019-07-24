@@ -1,0 +1,94 @@
+/* pages/groupOrder/groupOrder.wxss */
+
+.order_article {
+  width: 750rpx;
+  height: 8rpx;
+}
+
+.order_article image {
+  width: 100%;
+  vertical-align: top;
+}
+
+.orderTitle {
+  padding: 30rpx;
+}
+
+.orderTitle>view+view {
+  margin-top: 20rpx;
+}
+
+.orderContent>view+view {
+  margin-top: 10rpx;
+}
+
+.orderMsg {
+  box-sizing: border-box;
+  padding: 0 20rpx;
+}
+
+.orderMsg>view, .allPrice>view, .userMsg>view {
+  box-sizing: border-box;
+  padding: 20rpx 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.orderMsg>view+view, .allPrice>view+view, .userMsg>view+view {
+  border-top: 2rpx dashed #ddd;
+}
+
+.allPrice, .userMsg {
+  box-sizing: border-box;
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.userMsg input {
+  text-align: right;
+}
+
+.ps {
+  color: #f00;
+  display: flex;
+  justify-content: flex-end !important;
+  align-items: center;
+}
+
+.count > view {
+  display: flex;
+  align-items: center;
+}
+
+.count > view > view {
+  box-sizing: border-box;
+  padding: 10rpx;
+  border: 2rpx solid #ddd;
+  width: 50rpx;
+  height: 50rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.count > view > view:nth-child(2) {
+  width: 70rpx;
+}
+
+.count > view > view:last-child {
+  background: #fb6a3d;
+  border: 2rpx solid rgb(248, 97, 50);
+  color: #fff;
+}
+
+.count > view > view + view {
+  margin-left: 10rpx;
+}
+
+.submitOrder {
+  margin-top: 40rpx;
+  width: 90%;
+  color: #fff;
+  background: #fb6a3d;
+}

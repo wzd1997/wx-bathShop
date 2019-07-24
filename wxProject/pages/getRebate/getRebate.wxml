@@ -1,0 +1,61 @@
+<view class='topTabSwiper bg_fff' id='title'>
+  <view class='tab  {{currentData == 0 ? "tabBorer" : ""}}' data-current="0" bindtap='checkCurrent'>全场优惠</view>
+  <view class='tab  {{currentData == 1 ? "tabBorer" : ""}}' data-current="1" bindtap='checkCurrent'>待领取</view>
+  <view class='tab  {{currentData == 2 ? "tabBorer" : ""}}' data-current="2" bindtap='checkCurrent'>已领取</view>
+</view>
+
+<swiper current="{{currentData}}" id='swiper' style='height:{{swiperHeight}}rpx' class='swiper' duration="300" bindchange="bindchange">
+
+  <swiper-item class='allRebate'>
+    <scroll-view scroll-y='{{ scrollY }}' style='height:{{swiperHeight}}rpx'>
+      <view class='reList active bg_fff'>
+        <view class='left'>
+
+          <view>￥<text class='font_lg'>25</text>元</view>
+          <view class='type font_de'>优惠</view>
+
+        </view>
+
+        <view class='mid'>
+          <view class='nickname'>25元抵现卷</view>
+          <view class='timeRange font_sm font_999'>有效期 2019-10-01-2020-10-01</view>
+          <view class='count font_999 font_10'> <text>剩余993张</text> </view>
+        </view>
+
+        <view class='right font_999'bindtap='nowGet' data-count='{{ rebateNum }}'>立即领取</view>
+        <view class='upPoint'></view>
+        <view class='downPoint'></view>
+      </view>
+    </scroll-view>
+  </swiper-item>
+
+  <swiper-item class='waitGet'>
+    <scroll-view scroll-y='{{ scrollY }}' style='height:{{swiperHeight}}rpx'>
+
+    </scroll-view>
+  </swiper-item>
+
+  <swiper-item class="alreadyGet">
+    <scroll-view scroll-y='{{ scrollY }}' style='height:{{swiperHeight}}rpx'>
+      <view class='reList active bg_fff'>
+        <view class='left'>
+
+          <view>￥<text class='font_lg'>25</text>元</view>
+          <view class='type font_de'>优惠</view>
+
+        </view>
+
+        <view class='mid'>
+          <view class='nickname'>25元抵现卷</view>
+          <view class='timeRange font_sm font_999'>有效期 2019-10-01-2020-10-01</view>
+          <view class='count font_999 font_10'><text>已领取</text> </view>
+        </view>
+
+        <view class='right font_999'bindtap='nowGet' data-count='{{ rebateNum }}'>马上使用</view>
+        <view class='upPoint'></view>
+        <view class='downPoint'></view>
+      </view>
+    </scroll-view>
+  </swiper-item>
+
+</swiper>

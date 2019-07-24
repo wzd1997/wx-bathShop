@@ -1,0 +1,107 @@
+<!--pages/order/order.wxml-->
+<view class='topTabSwiper bg_fff'>
+  <view class='tab  {{currentData == 0 ? "tabBorer" : ""}}' data-current="0" bindtap='checkCurrent'>全部</view>
+  <view class='tab  {{currentData == 1 ? "tabBorer" : ""}}' data-current="1" bindtap='checkCurrent'>迎宾浴区</view>
+  <view class='tab  {{currentData == 2 ? "tabBorer" : ""}}' data-current="2" bindtap='checkCurrent'>休闲娱乐</view>
+  <view class='tab  {{currentData == 3 ? "tabBorer" : ""}}' data-current="3" bindtap='checkCurrent'>汗蒸休息</view>
+</view>
+
+<swiper current="{{currentData}}" class='swiper font_14 font_main' style="height:{{ swiperHeight }}rpx" duration="300" bindchange="bindchange">
+  <swiper-item>
+    <scroll-view scroll-y style='height:{{ swiperHeight }}rpx'>
+      <view class='wrapper'>
+        <view class='title'>
+          <text>迎宾浴区</text>
+        </view>
+        <view class='picture' bindtap='seePicture' data-type='bath'>
+          <image mode='widthFix' src='../../image/11.jpg'></image>
+          <image mode='widthFix' src='../../image/11.jpg'></image>
+          <image mode='widthFix' src='../../image/11.jpg'></image>
+          <image mode='widthFix' src='../../image/11.jpg'></image>
+          <image mode='widthFix' src='../../image/11.jpg'></image>
+          <image mode='widthFix' src='../../image/11.jpg'></image>
+          <image mode='widthFix' src='../../image/11.jpg'></image>
+        </view>
+      </view>
+      <view class='wrapper'>
+        <view class='title'>
+          <text>迎宾浴区</text>
+        </view>
+        <view class='picture' bindtap='seePicture' data-type='play'>
+          <image mode='widthFix' src='../../image/11.jpg'></image>
+          <image mode='widthFix' src='../../image/11.jpg'></image>
+          <image mode='widthFix' src='../../image/11.jpg'></image>
+          <image mode='widthFix' src='../../image/11.jpg'></image>
+          <image mode='widthFix' src='../../image/11.jpg'></image>
+          <image mode='widthFix' src='../../image/11.jpg'></image>
+          <image mode='widthFix' src='../../image/11.jpg'></image>
+          <image mode='widthFix' src='../../image/11.jpg'></image>
+        </view>
+      </view>
+
+    </scroll-view>
+  </swiper-item>
+
+  <swiper-item>
+     <scroll-view scroll-y style='height:{{ swiperHeight }}rpx'>
+      <view class='wrapper'>
+        <view class='title'>
+          <text>迎宾浴区</text>
+        </view>
+        <view class='picture' bindtap='seePicture' data-type='bath'>
+          <image mode='widthFix' src='../../image/11.jpg'></image>
+          <image mode='widthFix' src='../../image/11.jpg'></image>
+          <image mode='widthFix' src='../../image/11.jpg'></image>
+          <image mode='widthFix' src='../../image/11.jpg'></image>
+          <image mode='widthFix' src='../../image/11.jpg'></image>
+          <image mode='widthFix' src='../../image/11.jpg'></image>
+          <image mode='widthFix' src='../../image/11.jpg'></image>
+        </view>
+      </view>
+  
+
+    </scroll-view>
+  </swiper-item>
+
+  <swiper-item>
+     <scroll-view scroll-y style='height:{{ swiperHeight }}rpx'>
+      <view class='wrapper'>
+        <view class='title'>
+          <text>迎宾浴区</text>
+        </view>
+        <view class='picture' bindtap='seePicture' data-type='bath'>
+          <image mode='widthFix' src='../../image/11.jpg'></image>
+          <image mode='widthFix' src='../../image/11.jpg'></image>
+          <image mode='widthFix' src='../../image/11.jpg'></image>
+          <image mode='widthFix' src='../../image/11.jpg'></image>
+          <image mode='widthFix' src='../../image/11.jpg'></image>
+          <image mode='widthFix' src='../../image/11.jpg'></image>
+          <image mode='widthFix' src='../../image/11.jpg'></image>
+        </view>
+      </view>
+   
+
+    </scroll-view>
+  </swiper-item>
+
+  <swiper-item>
+     <scroll-view scroll-y style='height:{{ swiperHeight }}rpx'>
+      <view class='wrapper'>
+        <view class='title'>
+          <text>迎宾浴区</text>
+        </view>
+        <view class='picture' bindtap='seePicture' data-type='bath'>
+          <image mode='widthFix' src='../../image/11.jpg'></image>
+          <image mode='widthFix' src='../../image/11.jpg'></image>
+          <image mode='widthFix' src='../../image/11.jpg'></image>
+          <image mode='widthFix' src='../../image/11.jpg'></image>
+          <image mode='widthFix' src='../../image/11.jpg'></image>
+          <image mode='widthFix' src='../../image/11.jpg'></image>
+          <image mode='widthFix' src='../../image/11.jpg'></image>
+        </view>
+      </view>
+
+
+    </scroll-view>
+  </swiper-item>
+</swiper>

@@ -1,0 +1,27 @@
+<!--pages/pay/pay.wxml-->
+<view class='payHead'>
+  <view class='orderValue font_000'>￥{{ orderValue }}</view>
+  <view class='orderName font_de font_999'>{{orderName}}</view>
+</view>
+
+<view class='payType'>
+
+  <view bindtap='choosePayType' data-checked-index='1'>
+    <image src='../../image/logo.jpg'></image>
+    <view class='memberPay'>
+      <view class='font_bold font_000'>会员支付<view class='sign' >推荐</view> </view>
+      <view class='font_666 font_14'>立即充值，会员支付享更多优惠>>></view>
+    </view>
+    <image wx:if="{{ checked == '1' }}" class='checked' src='../../image/duihao.png' ></image>
+    <view wx:else class='no-checked' ></view>
+  </view>
+
+  <view class='typeWx' bindtap='choosePayType' data-checked-index='2'>
+    <image class='wxImg' src='../../image/wx.png'></image>
+    <view class='wxPay font_666 font_14'>微信支付</view>
+    <image wx:if="{{ checked == '2' }}" class='checked' src='../../image/duihao.png'></image>
+    <view  wx:else class='no-checked'></view>
+  </view>
+</view>
+
+<button class='payOrder'>立即支付</button>

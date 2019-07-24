@@ -1,0 +1,246 @@
+/* pages/memberCenter/memberCenter.wxss */
+
+.cardBox {
+  position: relative;
+  width: 750rpx;
+  height: 430rpx;
+}
+
+.bgImage, .vipImage {
+  width: 690rpx;
+  height: 370rpx;
+  margin: 30rpx;
+}
+
+.vipImage {
+  filter: brightness(0%);
+  z-index: 2;
+}
+
+.logoImage {
+  width: 70rpx;
+  height: 70rpx;
+}
+
+.cardTitle {
+  position: absolute;
+  top: 60rpx;
+  left: 60rpx;
+  width: 240rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardName {
+  width: 200rpx;
+  text-align: center;
+  position: absolute;
+  top: 190rpx;
+  left: 275rpx;
+}
+
+.cardNumber {
+  text-align: center;
+  position: absolute;
+  bottom: 60rpx;
+  left: 60rpx;
+}
+
+.cardFunc {
+  position: relative;
+  font-size: 28rpx;
+  padding: 20rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #fff;
+}
+
+.cardFunc image {
+  width: 60rpx;
+}
+
+.cardFunc navigator {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100rpx;
+}
+
+.cardFunc .line {
+  display: inline-block;
+  position: absolute;
+  width: 2rpx;
+  height: 80rpx;
+  background: #f0f0f0;
+}
+
+.memberMsg {
+  box-sizing: border-box;
+  padding: 20rpx 30rpx;
+  margin-top: 30rpx;
+  background: #fff;
+  font-size: 28rpx;
+}
+
+.memberMsg image {
+  width: 44rpx;
+  height: 44rpx;
+}
+
+.memberMsg>navigator,
+.memberMsg>view {
+  box-sizing: border-box;
+  padding: 28rpx 0;
+  border-bottom: 2rpx solid #f0f0f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.memberMsg>navigator:last-of-type {
+  border-bottom: none;
+}
+
+.memberMsg>navigator>view,
+.memberMsg>view>view {
+  width: 180rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+navigator .navImg {
+  position: relative;
+  left: 10rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.maskVip {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.wrapper {
+  padding: 10%;
+}
+
+.message image {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.wrapper > image {
+  width: 100%;
+  position: relative;
+  top: 124rpx;
+}
+
+.wrapper .text {
+  display: flex;
+  flex-direction: column;
+  padding: 120rpx 70rpx 10rpx 70rpx;
+  border-top-left-radius: 26rpx;
+  border-top-right-radius: 26rpx;
+  
+}
+
+.text text+text {
+  margin-top: 16rpx;
+  font-size: 28rpx;
+}
+
+.wrapper .message {
+  padding: 10rpx 70rpx;
+}
+
+.message > view {
+  display: flex;
+  align-items: center;
+}
+
+.message > view {
+  padding: 16rpx 0;
+  border-bottom: 2rpx solid #f5f5f5;
+}
+
+.message > view > input {
+  margin-left: 20rpx;
+  font-size: 26rpx;
+}
+
+.maskVip_input_placeholder {
+  font-size: 24rpx;
+}
+
+.progress {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 80rpx 100rpx 20rpx;
+  font-size: 24rpx;
+  color: #c9c9c9;
+}
+
+.point {
+  position: absolute;
+  width: 26rpx;
+  height: 26rpx;
+  background: #c9c9c9;
+  border-radius: 50%;
+  z-index: 2
+}
+.point.active {
+  background: #feb25c
+}
+
+.line {
+  position: absolute;
+  top: 39rpx;
+  left: 150rpx;
+  width: 300rpx;
+  height: 4rpx;
+  background: #c9c9c9;
+}
+
+.pointOne {
+  top: 28rpx;
+  left: 135rpx;
+}
+
+.pointTwo {
+  top: 28rpx;
+  left: 276rpx;
+}
+
+.pointThree {
+  top: 28rpx;
+  left: 428rpx;
+}
+
+.getVipBtn {
+  padding: 30rpx 25%;
+  border-bottom-left-radius: 20rpx;
+  border-bottom-right-radius: 20rpx;
+}
+
+.getVipBtn button {
+  font-size: 30rpx;
+  color: #922601;
+  background: linear-gradient(to right, #fff28b, #ffd76e);
+}
+.maskVip .turnOff {
+  width: 60rpx;
+  height: 60rpx;
+  position: absolute;
+  bottom: 16%;
+  left: 50%;
+  margin-left: -30rpx;
+}

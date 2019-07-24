@@ -1,0 +1,142 @@
+/* pages/payment/payment.wxss */
+
+page {
+  background: #f9eedc;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+}
+
+canvas {
+  position: absolute;
+  z-index: -1;
+}
+
+/* .head_bg {
+  position: relative; */
+
+/* margin-top: -750rpx;
+  margin-left: -375rpx;
+  width: 1500rpx;
+  height:110%;
+  border-radius: 50%;
+  background: linear-gradient(#FC805C, #ff2424); */
+
+/* } */
+
+.head_bg>.bg_fff {
+  /* border: 2rpx solid #ddd; */
+  box-shadow: 2rpx 2rpx 6rpx 0rpx #999;
+  width: 500rpx;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.box {
+  border-radius: 20rpx; 
+  margin-top: 20%;
+  box-sizing: border-box;
+  position: absolute;
+  width: 560rpx;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+}
+
+.midLine {
+  position: relative;
+  width: 100%;
+  border-bottom: 2rpx dashed #fb6a3d;
+}
+.leftY, .rightY {
+  width: 56rpx;
+  height: 56rpx;
+  border-radius: 50%;
+  background: #FD6C5A;
+  position: absolute;
+  z-index: 666;
+}
+
+.leftY {
+  top: -28rpx;
+  left: -28rpx;
+}
+
+.rightY {
+  top: -28rpx;
+  right: -28rpx;
+}
+
+.code {
+  width: 100%;
+  height: 160rpx;
+  float: left;
+  text-align: center;
+  line-height: 80px;
+  font-size: 23px;
+  color: #ff472f;
+  font-weight: bold;
+}
+
+.qr_code {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60rpx;
+  background: #fff;
+  border-bottom-left-radius: 20rpx;
+  border-bottom-right-radius: 20rpx;
+}
+
+.qr_code image {
+  width: 70%;
+}
+.explain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40rpx 0;
+  font-size: 32rpx;
+  color: #000;
+}
+
+.back {
+  position: absolute;
+  bottom: -150rpx;
+  z-index: 4;
+  width: 60%;
+  height: 80rpx;
+  background: linear-gradient(to right, #FB6324, #FF4431);
+  text-align: center;
+  line-height: 80rpx;
+  color: #fff;
+  border-radius: 10rpx;
+  font-size: 30rpx;
+}
+
+.title {
+  width: 100%;
+  padding: 30rpx 0;
+  text-align: center;
+  background: #f9eedc;
+  color: #ff472f;
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+}
+
+.ads_img {
+  width: 94%;
+  text-align: center;
+  margin-bottom: 10rpx;
+}
+
+.ads_img image {
+  width: inherit;
+  height: 140rpx;
+}
+

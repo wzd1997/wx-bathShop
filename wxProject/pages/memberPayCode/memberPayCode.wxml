@@ -1,0 +1,44 @@
+<!--pages/payment/payment.wxml-->
+<canvas style="width: 750rpx; height: 600rpx;" canvas-id="bgCanvas"></canvas>
+<image class='headImg' src='../../image/gg_h.png'></image>
+<view class='box'></view>
+
+<view class='bg_fff paper'>
+  <view class='grayShadow'></view>
+  <view class='leftY'></view>
+  <view class='rightY'></view>
+
+  <view class='qr_code'>
+
+    <view class='title font_de'>
+      <text>会员付款码</text>
+      <text>请于消费时出示</text>
+    </view>
+    <image src='../../image/erweima.png' mode='widthFix'></image>
+    <view class='font_de' style='margin:30rpx 0;'>
+      支付结束请及时关闭</view>
+    <view class='ads_img'>
+      <image mode='aspectFit' src='../../image/gg_top.png'></image>
+    </view>
+  </view>
+
+  <view class='footer'>
+    <view></view>
+    <view></view>
+    <view></view>
+    <view></view>
+    <view></view>
+    <view></view>
+    <view></view>
+    <view></view>
+    <view></view>
+    <view></view>
+    <view></view>
+    <view></view>
+    <view></view>
+  </view>
+
+  <button class='back' bindtap='goback'>
+    关闭支付
+  </button>
+</view>

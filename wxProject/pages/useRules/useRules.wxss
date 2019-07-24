@@ -1,0 +1,56 @@
+/* pages/memberExplain/memberExplain.wxss */
+
+.title {
+  position: relative;
+  z-index: 999;
+  display: flex;
+  padding: 20rpx 30rpx;
+  justify-content: center;
+  align-items: center;
+  background: rgb(251, 106, 61);
+  color: #fff;
+}
+.hello {
+  font-size: 36rpx;
+}
+
+.content {
+  box-sizing: border-box;
+  width: 710rpx;
+  margin: 20rpx;
+  border: 2rpx solid #ddd;
+  border-radius: 10rpx;
+  display: flex;
+  flex-direction: column;
+  padding: 20rpx 40rpx;
+}
+
+.content image {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+
+.memberEx-headImg {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20rpx 0;
+  border-bottom: 2rpx solid #ddd;
+}
+
+.headName {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20rpx;
+}
+
+.memberEx-address {
+  padding-top: 20rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.memberEx-address text+text{
+  margin-top: 10rpx;
+}

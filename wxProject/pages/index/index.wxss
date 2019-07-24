@@ -1,0 +1,251 @@
+.banners {
+  width: 100%;
+}
+
+.banners swiper {
+  width: 100%;
+}
+
+.banners image.slide-image {
+  width: 100%;
+  height: auto;
+}
+
+/* 标签种类 */
+
+.kindof {
+  background: #fff;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /* padding: 20rpx 20rpx 0 20rpx; */
+  padding-top: 20rpx;
+}
+
+.kindof>.nav {
+  width: 150rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+.kindof>.nav>image {
+  width: 50%;
+  margin-bottom: 10rpx;
+}
+
+.kindof>.nav>text {
+  font-size: 25rpx;
+}
+
+/* 超值热卖 */
+
+.index_hot_title {
+  margin-top: 20rpx;
+  padding: 20rpx 30rpx;
+  font-size: 35rpx;
+  font-weight: bold;
+  background: #fff;
+}
+
+.index_hot {
+  background: #fff;
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20rpx 20rpx 20rpx;
+}
+
+.index_hot_bce {
+  height: 280rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.index_hot_bc {
+  display: flex;
+  justify-content: space-between;
+}
+
+.index_hot .gg_a {
+  width: 280rpx;
+  height: 280rpx;
+}
+.index_hot .gg_a image {
+  width: 100%;
+}
+
+.index_hot .gg_b, .index_hot .gg_c {
+  width: 205rpx;
+  height: 135rpx;
+}
+
+.index_hot .gg_e {
+  width: 420rpx;
+  height: 135rpx;
+}
+
+/* 中间的广告 */
+
+.index_ads_mid {
+  box-sizing: border-box;
+  margin-top: 20rpx;
+  padding: 20rpx;
+  width: 100%;
+  height: 220rpx;
+  background: #fff;
+}
+
+.index_ads_mid image {
+  width: 100%;
+  height: 180rpx;
+}
+
+/* 团购推荐 */
+
+.index_group, .index_room {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 0 30rpx;
+}
+
+.index_group>.nav, .index_room>.nav {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 20rpx 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2rpx solid #f5f5f5;
+}
+.index_group>.nav:last-of-type,
+.index_room>.nav:last-of-type{
+  border-bottom: none;
+}
+.index_group_msg {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 500rpx;
+  height: 160rpx;
+}
+
+.index_group>.nav image, .index_room>.nav image {
+  box-sizing: border-box;
+  width: 170rpx;
+  height: 170rpx;
+  border-radius: 10rpx;
+  margin-right: 10rpx;
+}
+
+.index_group_title, .index_room_title {
+  font-size: 35rpx;
+}
+
+.index_group_content {
+  margin-top: 10rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 25rpx;
+  color: #999;
+}
+
+.index_group_sellMsg {
+  position: relative;
+  margin-top: 20rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.index_group_price {
+  color: #fb6a3d;
+  font-size: 25rpx;
+  margin-right: 10rpx;
+  line-height: 30rpx;
+}
+
+.index_group_price text {
+  font-size: 35rpx;
+  font-weight: bold;
+}
+
+.index_group_oriPrice {
+  text-decoration: line-through;
+  font-size: 25rpx;
+  color: #999;
+  line-height: 30rpx;
+}
+
+.index_group_sold {
+  position: absolute;
+  right: 0px;
+  font-size: 25rpx;
+  color: #999;
+  line-height: 30rpx;
+}
+
+/* 在线订房 */
+
+.index_ads_room {
+  box-sizing: border-box;
+  padding: 0 20rpx;
+  width: 100%;
+  height: 310rpx;
+  background: #fff;
+}
+
+.index_ads_room image {
+  width: 100%;
+}
+
+.index_room_msg {
+  display: flex;
+  justify-content: flex-start;
+  width: 500rpx;
+  height: 180rpx;
+}
+.index_room>.nav {
+  position: relative;
+}
+.index_room_type {
+  font-size: 25rpx;
+  color: #999;
+}
+.index_room_content {
+  box-sizing: border-box;
+  padding: 10rpx 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.index_room_title {
+  margin-bottom: 20rpx;
+}
+.index_room_type {
+  margin-bottom: 6rpx;
+}
+.index_room_price {
+  font-size: 25rpx;
+  color: #fb6a3d;
+  position: absolute;
+  right: 20rpx;
+  top: 78rpx
+  
+}
+.index_room_price text{
+  font-size: 35rpx;
+   font-weight: bold;
+}

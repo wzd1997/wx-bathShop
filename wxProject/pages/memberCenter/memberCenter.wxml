@@ -1,0 +1,130 @@
+<!--pages/memberCenter/memberCenter.wxml-->
+
+<!-- 会员卡 -->
+<view class='cardBox' bindtap='getVipCard' data-show='1'>
+  <image wx:if='{{ getVip }}' class='vipImage' src='../../image/vip_bg.png'></image>
+  <image wx:else class='bgImage' src='../../image/vip_bg.png'></image>
+  <view class='cardTitle' wx:if='{{ !getVip }}'>
+    <image class='logoImage' src='../../image/portrait.jpg'></image>
+    <text class='font_sm'>水丽汇道外店</text>
+  </view>
+  <view class='cardName' wx:if='{{ !getVip }}'>贵宾卡</view>
+  <view class='cardName' wx:else>领取会员卡</view>
+  <view class='cardNumber' wx:if='{{ !getVip }}'>SLH45678789563155653</view>
+</view>
+
+<view class='cardFunc'>
+  <navigator url='/pages/recharge/recharge'>
+    <image mode="widthFix" src='../../image/member_btn1.png'></image>
+    <text>充值</text>
+  </navigator>
+  <text class='line'></text>
+  <navigator url='/pages/payment/payment'>
+    <image mode='widthFix' src='../../image/member_btn2.png'></image>
+    <text>付款</text>
+  </navigator>
+</view>
+
+<!-- 会员信息 -->
+<view class='memberMsg'>
+  <view>
+    <view>
+      <image src='../../image/member1.png'></image>
+      <text>我的余额</text>
+    </view>
+    <text class='font_999'>￥0</text>
+  </view>
+
+  <view>
+    <view>
+      <image src='../../image/member2.png'></image>
+      <text>我的门票</text>
+    </view>
+    <text class='font_999'>0/张</text>
+  </view>
+
+  <view>
+    <view>
+      <image src='../../image/member3.png'></image>
+      <text>会员积分</text>
+    </view>
+    <text class='font_999'>0积分</text>
+  </view>
+
+  <navigator url='/pages/redEnvelopes/redEnvelopes'>
+    <view>
+      <image src='../../image/member4.png'></image>
+      <text>红包卡卷</text>
+    </view>
+    <text class='font_999'>0</text>
+  </navigator>
+
+  <navigator url='/pages/memberExplain/memberExplain'>
+    <view>
+      <image src='../../image/member5.png'></image>
+      <text>会员说明</text>
+    </view>
+    <image class="navImg" src='../../image/setup.jpg'></image>
+  </navigator>
+</view>
+
+<view class='memberMsg'>
+  <navigator url='/pages/bill/bill'>
+    <view>
+      <image src='../../image/member6.png'></image>
+      <text>历史账单</text>
+    </view>
+    <image class="navImg" src='../../image/setup.jpg'></image>
+  </navigator>
+
+  <navigator url='/pages/personalData/personalData'>
+    <view>
+      <image src='../../image/member7.png'></image>
+      <text>个人资料</text>
+    </view>
+    <image class="navImg" src='../../image/setup.jpg'></image>
+  </navigator>
+</view>
+
+
+
+<!-- 领取会员卡的弹出框 -->
+<view class="maskVip" wx:if="{{ showMaskVip }}">
+  <view class="wrapper">
+    <image mode='widthFix' src="../../image/getVip.png" />
+    <view class="bg_fff text">
+      <text class='font'>为了保障您的账户安全</text>
+      <text class='font_999'>请认真填写会员卡信息，领取会员卡</text>
+    </view>
+
+    <view class="message bg_fff">
+      <view>
+        <image src='../../image/foot_icon5.png'></image>
+        <input placeholder='请输入真实姓名' type='text' bindblur="realName" placeholder-class='maskVip_input_placeholder'></input>
+      </view>
+      <view>
+        <image src='../../image/yes_3.png'></image>
+        <input placeholder='请输入联系方式' type='number' bindblur="realPhone" maxlength='11' placeholder-class='maskVip_input_placeholder'></input>
+      </view>
+
+
+    </view>
+
+    <view class='progress bg_fff'>
+      <progress class='line' percent="0" backgroundColor="#c9c9c9" color="#feb25c" active='true' stroke-width="2" style='width:300rpx' />
+      <view class='pointOne point active'></view>
+      <view class='pointTwo point'></view>
+      <view class='pointThree point'></view>
+
+      <text class='font_vip'>填写信息</text>
+      <text>领取会员卡</text>
+      <text>领取大礼包</text>
+    </view>
+
+    <view class='getVipBtn bg_fff'>
+      <button bindtap='submitVipMsg'>领取会员卡</button>
+    </view>
+  </view>
+
+  <image class='turnOff' src='../../image/off.png' bindtap='getVipCard' data-show='0'></image>
+</view>

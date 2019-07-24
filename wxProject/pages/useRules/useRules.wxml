@@ -1,0 +1,28 @@
+<view class='title'>
+
+  <view class='hello'>{{ title }}</view>
+  
+</view>
+
+<view>
+  <view class='bg_fff content'>
+
+    <view class='memberEx-headImg'>
+      <image src='../../image/logo.jpg'></image>
+      <view class='font_de headName'>
+        <text>水丽汇道外店</text>
+        <text>周杰伦许嵩林俊杰薛之谦</text>
+      </view>
+    </view>
+
+    <view class='font_14 font_999 memberEx-address'>
+      <text>地址：哈尔滨市道外区阳光路2号</text>
+      <text>电话：0451-55757666</text>
+    </view>
+  </view>
+</view>
+
+<rich-text class='content bg_fff font_14 font_666'>{{content}}</rich-text>
+
+
+<button style='width: 20%;background: #fb6a3d;' class='font_fff font_14' bindtap='goBack'>返回</button>

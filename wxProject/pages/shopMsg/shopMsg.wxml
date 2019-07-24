@@ -1,0 +1,55 @@
+<!-- 轮播图 -->
+<view class='bannersTop'>
+  <swiper indicator-dots="true" indicator-color="#000" indicator-active-color="#fff" autoplay="true" circular="true">
+    <swiper-item wx:for="{{imgUrls}}" wx:key="{{index}}">
+      <image src="{{item}}" class="slide-image" />
+    </swiper-item>
+  </swiper>
+</view>
+
+<!-- 地址联系方式 -->
+<view class='head_address bg_fff'>
+  <image src='{{ headerHotelData.addressImg }}' mode='widthFix' bindtap='map'></image>
+  <view class='font_sm'>
+    <text class='font_de font_333'>{{ headerHotelData.address }}</text>
+    <text class='font_999'>{{ headerHotelData.addressMore }}</text>
+  </view>
+  <image src='../../image/tel.png' mode='widthFix' bindtap='call'></image>
+</view>
+
+<!-- 内容介绍 -->
+<view class='shopIntroduce bg_fff'>
+  <view>
+    <view>
+      <text class='font_999'>开业时间</text>2019-07-13</view>
+    <view>
+      <text class='font_999'>营业时间</text>2019-07-13</view>
+    <view>
+      <text class='font_999'>客房楼层</text>3F</view>
+  </view>
+  <view>
+    <view>
+      <text class='font_999'>装修时间</text>2019-07-13</view>
+    <view>
+      <text class='font_999'>门店楼房</text>1F-3F</view>
+    <view>
+      <text class='font_999'>客房数量</text>200</view>
+  </view>
+</view>
+
+
+<!-- 图标介绍 -->
+<view class='iconIntroduce font_999 bg_fff'>
+  <block wx:for="{{ headerHotelData.functionIcon }}" wx:key="{{ index }}">
+    <view>
+      <image src='{{ item.iconUrl }}'></image>
+      <text>{{ item.iconName }}</text>
+    </view>
+  </block>
+</view>
+
+<!-- 文字介绍 -->
+<view class='fontIntroduce bg_fff'>
+  <view>门店介绍</view>
+  <text class='font_666'>水丽汇休闲浴馆是一家以洗浴、桑拿、汗蒸、按摩、保健、棋牌、客房为一体的连锁洗浴门店，我们以中国传统沐浴文化为媒介，融汇中西方高品质沐浴人文理念，如沐春雨，身心自在。致力于打造温馨典雅的休闲氛围，在快节奏的城市生活中为您提供一个松弛的假日空间。</text>
+</view>

@@ -1,0 +1,54 @@
+<!--pages/groupOrder/groupOrder.wxml-->
+<view class='order_article'>
+  <image src='../../image/order_article.jpg' mode='widthFix'></image>
+</view>
+<view class='orderTitle borderBox font_14 font_666'>
+  <view class='font font_333'>总统套房</view>
+  <view class='orderContent'>
+    <view>房型：套房</view>
+    <view>床型：1.8m×2.0m一张床</view>
+    <view>价格：￥9999</view>
+  </view>
+
+</view>
+
+
+<view class='allPrice bg_fff font_14 font_666'>
+  <view>
+    <view>入住时间</view>
+    <view>2019-10-01~2019-10-08（共7晚）</view>
+  </view>
+</view>
+
+
+
+<view class='userMsg bg_fff font_14 font_666'>
+  <view>
+    <view>入住人</view>
+    <input type='text' placeholder='请输入姓名' bindblur='getname'></input>
+  </view>
+  <view>
+    <view>手机号</view>
+    <input type='number' placeholder='请输入手机号' maxlength="11" bindblur='getphone'></input>
+  </view>
+  <view>
+    <view>身份证号</view>
+    <input type='idcard' placeholder='请输入身份证号' maxlength="18" bindblur='getIdcard'></input>
+  </view>
+  <view class='ps'>
+    <text>*请在</text>
+    <text class='font_666' bindtap='gomy'>个人中心</text>
+    <text>完善姓名/电话，操作更简便</text>
+  </view>
+</view>
+
+<view class='allPrice bg_fff font_14 font_666'>
+  <view>
+    <view>订单合计</view>
+    <view class='font_main font_bold font_de'>￥9999</view>
+  </view>
+</view>
+
+<view class='allPrice font_14 font_666'>订单确认后<text class='font_main'>不可取消/变更</text>，如未入住，酒店将扣除所有房费；房间整晚保留，请及时入住</view>
+
+<button class='submitOrder' bindtap='submitOrder' data-order-msg='{{ ordermsg }}'>提交订单</button>

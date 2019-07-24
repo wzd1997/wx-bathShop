@@ -1,0 +1,56 @@
+<!--pages/groupOrder/groupOrder.wxml-->
+<view class='order_article'>
+  <image src='../../image/order_article.jpg' mode='widthFix'></image>
+</view>
+<view class='orderTitle borderBox'>
+  <view class='font'>超值综合套票仅售69元</view>
+  <view class='font_14 font_666'>门票+毛巾+浴品+澡巾+搓澡+足底按摩30分钟+汗蒸+大厅休息+过夜费</view>
+</view>
+
+<view class='orderMsg bg_fff font_14 font_666'>
+
+  <view class='price'>
+    <text>单价</text>
+    <text>￥{{ price }}</text>
+  </view>
+
+  <view class='count'>
+    <text>数量</text>
+    <view>
+      <view bindtap='reduce' data-count='{{ count }}'>-</view>
+      <view>{{ count }}</view>
+      <view bindtap='add' data-count='{{ count }}'>+</view>
+    </view>
+  </view>
+
+  <view class='computer'>
+    <view>小计</view>
+    <view>￥{{ allPrice }}</view>
+  </view>
+
+</view>
+
+<view class='allPrice bg_fff font_14 font_666'>
+  <view>
+    <view>总价</view>
+    <view>￥{{ allPrice }}</view>
+  </view>
+</view>
+
+<view class='userMsg bg_fff font_14 font_666'>
+  <view>
+    <view>姓名</view>
+    <input type='text' placeholder='请输入姓名' bindblur='getname'></input>
+  </view>
+  <view>
+    <view>手机</view>
+    <input type='number' placeholder='请输入手机号' maxlength="11" bindblur='getphone'></input>
+  </view>
+  <view class='ps'>
+    <text>*请在</text>
+    <text class='font_666' bindtap='gomy'>个人中心</text>
+    <text>完善姓名/电话，操作更简便</text>
+  </view>
+</view>
+
+<button class='submitOrder' bindtap='submitOrder' data-order-msg='{{ ordermsg }}'>提交订单</button>

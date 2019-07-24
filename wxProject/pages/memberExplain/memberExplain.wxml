@@ -1,0 +1,50 @@
+<view class='title'>
+
+  <view class='hello font_de'>
+    <text>Hi! 萧炎</text>
+    <view class='font_sm'>欢迎使用本系统，希望这里可以帮到您!</view>
+  </view>
+
+  <view class='backBtn font_sm' bindtap='goBack'>返回
+  </view>
+</view>
+
+<view class='rulesList bg_fff' style=''>
+  <view class='typeTitle font_de font_main'>政策说明</view>
+
+  <block wx:for="{{ memberExplainList }}" wx:key="{{ item.id }}">
+    <view bindtap='seeDetail' data-data='{{ item }}' class='item-list'>
+      <view class='font_de section'>
+
+        <view class='secTitle'>
+          <image src='{{ item.url }}'></image>
+          <text>{{ item.title }}</text>
+        </view>
+        <view class='downAngle'></view>
+
+      </view>
+
+
+    </view>
+  </block>
+</view>
+
+<view class='rulesList bg_fff' style=''>
+  <view class='typeTitle font_de font_main'>使用攻略</view>
+
+  <view class='useMethod'>
+    23121321
+  </view>
+</view>
+
+
+
+
+
+<!-- <view>
+
+  <view class='section'>使用攻略</view>
+  <view>
+
+  </view>
+</view> -->

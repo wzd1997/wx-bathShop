@@ -1,0 +1,221 @@
+/* pages/orderDetail/orderDetail.wxss */
+
+.order_article {
+  width: 750rpx;
+  height: 8rpx;
+}
+
+.order_article image {
+  width: 100%;
+  vertical-align: top;
+}
+
+.orderTitle {
+  box-sizing: border-box;
+  padding: 20rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.orderTitle image {
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 10rpx;
+}
+
+.orderTitle>view {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  margin-left: 20rpx;
+}
+
+.orderTitle>view text+text {
+  margin-top: 20rpx;
+}
+
+.orderMsg, .payMsg, .orderInfo {
+  margin-top: 20rpx;
+  box-sizing: border-box;
+  padding: 0 40rpx;
+}
+
+.payMsg {
+  padding: 0 40rpx;
+}
+
+.payMsg>text, .orderInfo>text {
+  display: inline-block;
+  box-sizing: border-box;
+  margin: 20rpx 0 20rpx -20rpx;
+  border-left: 4rpx solid #fb6a3d;
+  padding-left: 20rpx;
+}
+
+.orderMsg>view, .payMsg>view {
+  box-sizing: border-box;
+  padding: 24rpx 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.orderInfo view {
+  padding-bottom: 24rpx;
+}
+
+.orderInfo>view>text {
+  margin-left: 10rpx;
+}
+
+.payMsg>view {
+  padding: 24rpx 0;
+}
+
+.orderMsg>view+view, .payMsg>view+view {
+  border-top: 2rpx dashed #ddd;
+}
+
+.rebate>view:last-child {
+  display: flex;
+  align-items: center;
+}
+
+.rightAngle {
+  margin-left: 10rpx;
+  width: 14rpx;
+  height: 14rpx;
+  border-top: 3rpx solid #666;
+  border-right: 3rpx solid #666;
+  transform: rotateZ(45deg);
+}
+
+.payOrder {
+  margin: 40rpx 5%;
+  width: 90%;
+  color: #fff;
+  background: #fb6a3d;
+}
+
+/* 选择红包的遮罩层 */
+
+.hiddenMask {
+  display: none;
+}
+
+.showMask {
+  display: fixed;
+}
+
+.rebateMask {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.redBox {
+  position: relative;
+  box-sizing: border-box;
+  border-radius: 10rpx;
+  padding: 0 20rpx;
+  width: 90%;
+  margin: 20% 5%;
+  /* height: 50%; */
+  background: #fa5853;
+}
+
+.rebate_title {
+  color: #fff;
+  padding: 30rpx;
+  text-align: center;
+  border-bottom: 2rpx dashed #fff;
+}
+
+.closeMask {
+  padding: 20rpx 0;
+  box-sizing: border-box;
+  text-align: center;
+  
+}
+.closeMask image {
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.rebate_item {
+  height: 214rpx;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.rebate_item_pa {
+  box-sizing: border-box;
+  height: 234rpx;
+  padding-top: 20rpx;
+}
+.up {
+  box-sizing: border-box;
+  padding: 30rpx 20rpx;
+  display: flex;
+  align-items: center;
+  height: 142rpx;
+}
+
+.up view:first-child {
+  font-size: 56rpx;
+}
+
+.up .rebate_type {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30rpx;
+}
+
+.rebate_type > text+text {
+  margin-top: 10rpx;
+}
+
+.down {
+  background: #eee;
+  box-sizing: border-box;
+  padding: 20rpx 20rpx;
+}
+
+.leftO, .rightO {
+  width: 30rpx;
+  height: 30rpx;
+  position: absolute;
+  background: #fa5853;
+  border-radius: 50%;
+  top: 127rpx;
+}
+
+.leftO {
+  left: -15rpx;
+}
+
+.rightO {
+  right: -15rpx;
+}
+
+.checked {
+  width: 30rpx;
+  height: 30rpx;
+  border: 2rpx  solid #fa5853;
+  /* background: #fa5853; */
+  border-radius: 50%;
+  position: absolute;
+  z-index: 999;
+  top: 50rpx;
+  right: 50rpx;
+}
+image.checked {
+  width: 32rpx;
+  height: 32rpx;
+  border: 2rpx  solid transparent;
+}

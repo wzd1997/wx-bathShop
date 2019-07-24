@@ -1,0 +1,62 @@
+/* pages/shop/shop.wxss */
+.bannersTop swiper{
+  height: 420rpx;
+}
+.slide-image {
+  width: 100%;
+  height:inherit;
+}
+.shopIntroduce {
+  padding: 20rpx 40rpx;
+  font-size: 28rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.shopIntroduce > view {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.shopIntroduce > view > view + view {
+  margin-top: 10rpx;
+}
+.shopIntroduce > view > view > text {
+  margin-right: 28rpx;
+}
+.iconIntroduce {
+  padding: 20rpx 40rpx;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20rpx;
+}
+.iconIntroduce > view {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex: 0 0 20%;
+  margin: 6rpx 0 ;
+}
+
+.iconIntroduce text{
+  font-size: 24rpx;
+  margin-left: 10rpx;
+}
+.iconIntroduce image{
+  width: 36rpx;
+  height: 36rpx;
+}
+.fontIntroduce {
+  margin-top: 20rpx;
+}
+.fontIntroduce view{
+  border-bottom: 2rpx solid #f5f5f5;
+  padding: 20rpx 30rpx;
+  font-size: 32rpx;
+}
+.fontIntroduce text {
+  display: inline-block;
+  padding: 20rpx;
+  text-indent: 56rpx;
+  font-size: 28rpx;
+  line-height: 2;
+}

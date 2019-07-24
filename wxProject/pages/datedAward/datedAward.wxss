@@ -1,0 +1,46 @@
+/* pages/datedProduct/datedProduct.wxss */
+.back {
+  margin-top: 20rpx;
+  box-sizing: border-box;
+  width: 30%;
+  margin: 20rpx auto;
+  padding: 10rpx;
+  border-radius: 10rpx;
+  text-align: center;
+  background: #13c2bd;
+  color: #fff;
+}
+.awardList {
+  box-sizing: border-box;
+  padding: 20rpx;
+  background: #fff;
+}
+.award-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.award-img {
+  width: 240rpx;
+  height: 150rpx;
+}
+.awardMsg {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20rpx;
+}
+.award-title {
+  margin-bottom: 10rpx;
+}
+.more {
+  width: 50rpx;
+  height: 50rpx;
+  position: absolute;
+  right: 0;
+}
+.dated {
+  width: 180rpx;
+  position: absolute;
+  right: 35rpx;
+}
